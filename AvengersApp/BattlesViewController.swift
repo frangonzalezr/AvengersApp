@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  AvengersApp
 //
 //  Created by Fran González on 19/04/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class BattlesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
