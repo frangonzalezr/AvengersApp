@@ -9,7 +9,7 @@
 import UIKit
 
 class HeroesTableViewController: UITableViewController {
-
+    var cellColors = ["#F28044","#F0A761","#FEC362","#F0BB4C","#E3CB92","#FEA375"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 200
@@ -23,23 +23,27 @@ class HeroesTableViewController: UITableViewController {
 
       override func numberOfSections(in tableView: UITableView) -> Int {
           // #warning Incomplete implementation, return the number of sections
-          return 0
+          return 1
       }
 
       override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
           // #warning Incomplete implementation, return the number of rows
-          return 0
+          return 4
       }
 
-      /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Seleccionado Héroe \(indexPath)")
+    }
+    
+      
       override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+          let cell = tableView.dequeueReusableCell(withIdentifier: "heroesCell", for: indexPath)
+        cell.contentView.backgroundColor = UIColor(hexString: cellColors[indexPath.row % cellColors.count])
           // Configure the cell...
 
           return cell
       }
-      */
+      
 
       /*
       // Override to support conditional editing of the table view.

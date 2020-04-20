@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A193E1CD244DFE04002B907E /* HeroesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */; };
+		A193E1CF244E037A002B907E /* BattlesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */; };
+		A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */; };
 		A1B407B1244CD628009A213E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B407B0244CD628009A213E /* UIViewController+Extensions.swift */; };
 		A1F04B99244C7995009CB614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F04B98244C7995009CB614 /* AppDelegate.swift */; };
 		A1F04B9B244C7995009CB614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F04B9A244C7995009CB614 /* SceneDelegate.swift */; };
@@ -16,10 +19,13 @@
 		A1F04BA5244C7995009CB614 /* AvengersApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1F04BA3244C7995009CB614 /* AvengersApp.xcdatamodeld */; };
 		A1F04BA7244C7998009CB614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F04BA6244C7998009CB614 /* Assets.xcassets */; };
 		A1F04BAA244C7998009CB614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F04BA8244C7998009CB614 /* LaunchScreen.storyboard */; };
-		A1F04BB2244C7C8E009CB614 /* VillainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F04BB1244C7C8E009CB614 /* VillainTableViewController.swift */; };
+		A1F04BB2244C7C8E009CB614 /* VillainsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F04BB1244C7C8E009CB614 /* VillainsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDetailViewController.swift; sourceTree = "<group>"; };
+		A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesDetailViewController.swift; sourceTree = "<group>"; };
+		A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsDetailViewController.swift; sourceTree = "<group>"; };
 		A1B407B0244CD628009A213E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		A1F04B95244C7995009CB614 /* AvengersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvengersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F04B98244C7995009CB614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +37,7 @@
 		A1F04BA6244C7998009CB614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1F04BA9244C7998009CB614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1F04BAB244C7998009CB614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1F04BB1244C7C8E009CB614 /* VillainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainTableViewController.swift; sourceTree = "<group>"; };
+		A1F04BB1244C7C8E009CB614 /* VillainsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsTableViewController.swift; sourceTree = "<group>"; };
 		A1F04BB3244C7DDB009CB614 /* AvengersApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AvengersApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +76,11 @@
 				A1F04B98244C7995009CB614 /* AppDelegate.swift */,
 				A1F04B9A244C7995009CB614 /* SceneDelegate.swift */,
 				A1F04B9C244C7995009CB614 /* HeroesTableViewController.swift */,
+				A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */,
 				A1F04B9E244C7995009CB614 /* BattlesTableViewController.swift */,
-				A1F04BB1244C7C8E009CB614 /* VillainTableViewController.swift */,
+				A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */,
+				A1F04BB1244C7C8E009CB614 /* VillainsTableViewController.swift */,
+				A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */,
 				A1F04BA0244C7995009CB614 /* Main.storyboard */,
 				A1F04BA6244C7998009CB614 /* Assets.xcassets */,
 				A1F04BA8244C7998009CB614 /* LaunchScreen.storyboard */,
@@ -153,11 +162,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F04B9F244C7995009CB614 /* BattlesTableViewController.swift in Sources */,
+				A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */,
 				A1F04B9D244C7995009CB614 /* HeroesTableViewController.swift in Sources */,
 				A1F04B99244C7995009CB614 /* AppDelegate.swift in Sources */,
+				A193E1CF244E037A002B907E /* BattlesDetailViewController.swift in Sources */,
 				A1B407B1244CD628009A213E /* UIViewController+Extensions.swift in Sources */,
 				A1F04B9B244C7995009CB614 /* SceneDelegate.swift in Sources */,
-				A1F04BB2244C7C8E009CB614 /* VillainTableViewController.swift in Sources */,
+				A1F04BB2244C7C8E009CB614 /* VillainsTableViewController.swift in Sources */,
+				A193E1CD244DFE04002B907E /* HeroesDetailViewController.swift in Sources */,
 				A1F04BA5244C7995009CB614 /* AvengersApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
