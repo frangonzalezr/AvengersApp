@@ -30,8 +30,16 @@ class VillainsTableViewController: UITableViewController {
               return 4
           }
 
-          override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-              print("Seleccionado Villano \(indexPath)")
+          override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+          {
+               if (segue.identifier == "SEGUE_FROM_VILLAINS_TO_DETAIL") {
+                  if let indexPath = self.tableView.indexPathForSelectedRow {
+                      guard let destinationVC = segue.destination as? VillainsDetailViewController else { return }
+                      destinationVC.barTitle = "\(indexPath)"
+                  }
+
+              }
+              
           }
           
             

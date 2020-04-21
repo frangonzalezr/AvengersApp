@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="524-QA-g0G" kind="show" id="AUo-Lc-sX9"/>
+                                    <segue destination="524-QA-g0G" kind="show" identifier="SEGUE_FROM_HEROES_TO_DETAIL" id="AUo-Lc-sX9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,7 +57,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ivS-O5-m0c" kind="show" id="4mX-59-ZLD"/>
+                                    <segue destination="ivS-O5-m0c" kind="show" identifier="SEGUE_FROM_BATTLES_TO_DETAIL" id="4mX-59-ZLD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,7 +105,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="EKe-gm-eIg" kind="show" id="QCz-FV-Iba"/>
+                                    <segue destination="EKe-gm-eIg" kind="show" identifier="SEGUE_FROM_VILLAINS_TO_DETAIL" id="QCz-FV-Iba"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -238,7 +238,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TzV-mM-KFo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IdG-fj-AdR"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="IdG-fj-AdR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fN8-IA-3k9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

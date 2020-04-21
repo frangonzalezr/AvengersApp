@@ -9,8 +9,12 @@
 import UIKit
 
 class HeroesDetailViewController: UIViewController {
+    
+    var barTitle: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = barTitle
 
     }
 }

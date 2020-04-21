@@ -30,12 +30,19 @@ class HeroesTableViewController: UITableViewController {
           // #warning Incomplete implementation, return the number of rows
           return 4
       }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+         if (segue.identifier == "SEGUE_FROM_HEROES_TO_DETAIL") {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                guard let destinationVC = segue.destination as? HeroesDetailViewController else { return }
+                destinationVC.barTitle = "\(indexPath)"
+            }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Seleccionado Héroe \(indexPath)")
+        }
+        
     }
     
-      
       override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           let cell = tableView.dequeueReusableCell(withIdentifier: "heroesCell", for: indexPath)
         cell.contentView.backgroundColor = UIColor(hexString: cellColors[indexPath.row % cellColors.count])

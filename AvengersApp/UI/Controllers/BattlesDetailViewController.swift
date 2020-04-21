@@ -9,8 +9,12 @@
 import UIKit
 
 class BattlesDetailViewController: UIViewController {
+    
+    var barTitle: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = barTitle
 
     }
 }

@@ -52,6 +52,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16E6298244F9F4A00DDBA5C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1F04B98244C7995009CB614 /* AppDelegate.swift */,
+				A1F04B9A244C7995009CB614 /* SceneDelegate.swift */,
+				A1F04BAB244C7998009CB614 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A16E6299244F9F5600DDBA5C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A1F04BA6244C7998009CB614 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A16E629A244F9F6400DDBA5C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A16E629C244F9F8F00DDBA5C /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A16E629B244F9F6E00DDBA5C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A1F04BA0244C7995009CB614 /* Main.storyboard */,
+				A1F04BA8244C7998009CB614 /* LaunchScreen.storyboard */,
+				A16E629E244F9FBC00DDBA5C /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A16E629C244F9F8F00DDBA5C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				A16E629D244F9F9500DDBA5C /* Models */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		A16E629D244F9F9500DDBA5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1F04BA3244C7995009CB614 /* AvengersApp.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A16E629E244F9FBC00DDBA5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1B407B0244CD628009A213E /* UIViewController+Extensions.swift */,
+				A1F04B9C244C7995009CB614 /* HeroesTableViewController.swift */,
+				A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */,
+				A1F04B9E244C7995009CB614 /* BattlesTableViewController.swift */,
+				A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */,
+				A1F04BB1244C7C8E009CB614 /* VillainsTableViewController.swift */,
+				A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		A1F04B8C244C7995009CB614 = {
 			isa = PBXGroup;
 			children = (
@@ -71,21 +137,11 @@
 		A1F04B97244C7995009CB614 /* AvengersApp */ = {
 			isa = PBXGroup;
 			children = (
-				A1B407B0244CD628009A213E /* UIViewController+Extensions.swift */,
+				A16E629B244F9F6E00DDBA5C /* UI */,
+				A16E629A244F9F6400DDBA5C /* Data */,
+				A16E6298244F9F4A00DDBA5C /* App */,
+				A16E6299244F9F5600DDBA5C /* Resource */,
 				A1F04BB3244C7DDB009CB614 /* AvengersApp.entitlements */,
-				A1F04B98244C7995009CB614 /* AppDelegate.swift */,
-				A1F04B9A244C7995009CB614 /* SceneDelegate.swift */,
-				A1F04B9C244C7995009CB614 /* HeroesTableViewController.swift */,
-				A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */,
-				A1F04B9E244C7995009CB614 /* BattlesTableViewController.swift */,
-				A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */,
-				A1F04BB1244C7C8E009CB614 /* VillainsTableViewController.swift */,
-				A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */,
-				A1F04BA0244C7995009CB614 /* Main.storyboard */,
-				A1F04BA6244C7998009CB614 /* Assets.xcassets */,
-				A1F04BA8244C7998009CB614 /* LaunchScreen.storyboard */,
-				A1F04BAB244C7998009CB614 /* Info.plist */,
-				A1F04BA3244C7995009CB614 /* AvengersApp.xcdatamodeld */,
 			);
 			path = AvengersApp;
 			sourceTree = "<group>";
@@ -317,7 +373,7 @@
 				CODE_SIGN_ENTITLEMENTS = AvengersApp/AvengersApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TT6289TL7;
-				INFOPLIST_FILE = AvengersApp/Info.plist;
+				INFOPLIST_FILE = AvengersApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,7 +393,7 @@
 				CODE_SIGN_ENTITLEMENTS = AvengersApp/AvengersApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TT6289TL7;
-				INFOPLIST_FILE = AvengersApp/Info.plist;
+				INFOPLIST_FILE = AvengersApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
