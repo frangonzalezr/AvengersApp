@@ -9,7 +9,7 @@
 import UIKit
 
 class HeroesTableViewController: UITableViewController {
-    var cellColors = ["#F28044","#F0A761","#FEC362","#F0BB4C","#E3CB92","#FEA375"]
+    var cellColors = ["#264f96","#075ff7","#367beb","#6893d9","#97b1db","#a3bce6"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 200
@@ -28,7 +28,7 @@ class HeroesTableViewController: UITableViewController {
 
       override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
           // #warning Incomplete implementation, return the number of rows
-          return 4
+          return 6
       }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
