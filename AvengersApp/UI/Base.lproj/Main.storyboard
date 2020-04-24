@@ -17,14 +17,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.76901948450000002" green="0.82672792669999995" blue="0.95884889360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="heroesCell" rowHeight="170" id="Rc1-pz-EV5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="heroesCell" rowHeight="170" id="Rc1-pz-EV5" customClass="HeroesTableViewCell" customModule="AvengersApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="heroesCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rc1-pz-EV5" id="aw5-kK-JfU">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hnq-z9-1ST">
+                                            <rect key="frame" x="87" y="11" width="240" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hnq-z9-1ST" secondAttribute="bottom" constant="20" id="6TI-Gi-gZe"/>
+                                        <constraint firstItem="hnq-z9-1ST" firstAttribute="leading" secondItem="aw5-kK-JfU" secondAttribute="leadingMargin" constant="67" id="8OE-c8-SDD"/>
+                                        <constraint firstItem="hnq-z9-1ST" firstAttribute="centerX" secondItem="aw5-kK-JfU" secondAttribute="centerX" id="cIk-ZM-3sg"/>
+                                        <constraint firstItem="hnq-z9-1ST" firstAttribute="top" secondItem="aw5-kK-JfU" secondAttribute="topMargin" id="s4s-Cz-MOE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cellView" destination="aw5-kK-JfU" id="jJL-UJ-kCR"/>
+                                    <outlet property="heroImage" destination="hnq-z9-1ST" id="0cq-48-Lkw"/>
                                     <segue destination="524-QA-g0G" kind="show" identifier="SEGUE_FROM_HEROES_TO_DETAIL" id="AUo-Lc-sX9"/>
                                 </connections>
                             </tableViewCell>
@@ -49,14 +62,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="battlesCell" rowHeight="85" id="bEM-2U-ObS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="battlesCell" rowHeight="85" id="bEM-2U-ObS" customClass="BattlesTableViewCell" customModule="AvengersApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bEM-2U-ObS" id="2jD-tx-hv9">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X8d-Wz-Vbt">
+                                            <rect key="frame" x="20" y="0.0" width="135" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="135" id="jTV-iP-AJZ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a1w-NW-gC5">
+                                            <rect key="frame" x="259" y="0.0" width="135" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="135" id="3IU-cc-qj3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_battle_round" translatesAutoresizingMaskIntoConstraints="NO" id="lS2-iH-17o">
+                                            <rect key="frame" x="156" y="0.0" width="102" height="85"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lS2-iH-17o" firstAttribute="centerX" secondItem="2jD-tx-hv9" secondAttribute="centerX" id="7yp-S0-JET"/>
+                                        <constraint firstItem="lS2-iH-17o" firstAttribute="leading" secondItem="X8d-Wz-Vbt" secondAttribute="trailing" constant="1" id="Brf-S5-j1Z"/>
+                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="centerY" secondItem="2jD-tx-hv9" secondAttribute="centerY" id="QOE-z0-cBB"/>
+                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="top" secondItem="a1w-NW-gC5" secondAttribute="top" id="Qd5-GE-s7j"/>
+                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="top" secondItem="2jD-tx-hv9" secondAttribute="top" id="uK3-eX-TCj"/>
+                                        <constraint firstItem="lS2-iH-17o" firstAttribute="bottom" secondItem="X8d-Wz-Vbt" secondAttribute="bottom" id="ucJ-kb-nN9"/>
+                                        <constraint firstItem="lS2-iH-17o" firstAttribute="top" secondItem="X8d-Wz-Vbt" secondAttribute="top" id="vcQ-PE-RX1"/>
+                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="bottom" secondItem="a1w-NW-gC5" secondAttribute="bottom" id="wUm-B7-7wh"/>
+                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="leading" secondItem="2jD-tx-hv9" secondAttribute="leadingMargin" id="wtD-Gc-CQL"/>
+                                        <constraint firstItem="a1w-NW-gC5" firstAttribute="trailing" secondItem="2jD-tx-hv9" secondAttribute="trailingMargin" id="zM9-n6-1tp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cellView" destination="2jD-tx-hv9" id="Aaf-kn-c2r"/>
+                                    <outlet property="heroBattleImage" destination="X8d-Wz-Vbt" id="AoS-GK-n5X"/>
+                                    <outlet property="roudBattleImage" destination="lS2-iH-17o" id="gxr-js-bUm"/>
+                                    <outlet property="villainBattleImage" destination="a1w-NW-gC5" id="qWK-HW-ACc"/>
                                     <segue destination="ivS-O5-m0c" kind="show" identifier="SEGUE_FROM_BATTLES_TO_DETAIL" id="4mX-59-ZLD"/>
                                 </connections>
                             </tableViewCell>
@@ -97,14 +143,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="villainsCell" rowHeight="170" id="rL5-88-9nd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="villainsCell" rowHeight="170" id="rL5-88-9nd" customClass="VillainsTableViewCell" customModule="AvengersApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rL5-88-9nd" id="0CN-2M-YIx">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-r2-9je">
+                                            <rect key="frame" x="87" y="11" width="240" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="VaB-r2-9je" secondAttribute="bottom" constant="20" id="0u4-Pw-P3G"/>
+                                        <constraint firstItem="VaB-r2-9je" firstAttribute="top" secondItem="0CN-2M-YIx" secondAttribute="topMargin" id="ZPr-Xh-CfJ"/>
+                                        <constraint firstItem="VaB-r2-9je" firstAttribute="centerX" secondItem="0CN-2M-YIx" secondAttribute="centerX" id="sE5-yH-UUi"/>
+                                        <constraint firstItem="VaB-r2-9je" firstAttribute="leading" secondItem="0CN-2M-YIx" secondAttribute="leadingMargin" constant="67" id="yP7-Lq-J2x"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cellView" destination="0CN-2M-YIx" id="Ki9-C7-zjJ"/>
+                                    <outlet property="villainImage" destination="VaB-r2-9je" id="wyZ-J2-fMG"/>
                                     <segue destination="EKe-gm-eIg" kind="show" identifier="SEGUE_FROM_VILLAINS_TO_DETAIL" id="QCz-FV-Iba"/>
                                 </connections>
                             </tableViewCell>
@@ -246,6 +305,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_battle_round" width="512" height="512"/>
         <image name="ic_tab_battles" width="17" height="17"/>
         <image name="ic_tab_heroes" width="16" height="17"/>
         <image name="ic_tab_villain" width="11" height="17"/>

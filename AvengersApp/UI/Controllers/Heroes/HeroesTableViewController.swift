@@ -10,6 +10,9 @@ import UIKit
 
 class HeroesTableViewController: UITableViewController {
     var cellColors = ["#264f96","#075ff7","#367beb","#6893d9","#97b1db","#a3bce6"]
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 200

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14335AE24535F0E00012C8D /* HeroesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14335AD24535F0E00012C8D /* HeroesTableViewCell.swift */; };
+		A14335B024535F1E00012C8D /* BattlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14335AF24535F1E00012C8D /* BattlesTableViewCell.swift */; };
+		A14335B224535F3100012C8D /* VillainsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14335B124535F3100012C8D /* VillainsTableViewCell.swift */; };
 		A193E1CD244DFE04002B907E /* HeroesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */; };
 		A193E1CF244E037A002B907E /* BattlesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */; };
 		A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A14335AD24535F0E00012C8D /* HeroesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewCell.swift; sourceTree = "<group>"; };
+		A14335AF24535F1E00012C8D /* BattlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesTableViewCell.swift; sourceTree = "<group>"; };
+		A14335B124535F3100012C8D /* VillainsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsTableViewCell.swift; sourceTree = "<group>"; };
 		A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDetailViewController.swift; sourceTree = "<group>"; };
 		A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesDetailViewController.swift; sourceTree = "<group>"; };
 		A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsDetailViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A14335B324535F4800012C8D /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				A1F04B9C244C7995009CB614 /* HeroesTableViewController.swift */,
+				A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */,
+				A14335AD24535F0E00012C8D /* HeroesTableViewCell.swift */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		A14335B424535F5E00012C8D /* Battles */ = {
+			isa = PBXGroup;
+			children = (
+				A1F04B9E244C7995009CB614 /* BattlesTableViewController.swift */,
+				A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */,
+				A14335AF24535F1E00012C8D /* BattlesTableViewCell.swift */,
+			);
+			path = Battles;
+			sourceTree = "<group>";
+		};
+		A14335B524535F6800012C8D /* Villains */ = {
+			isa = PBXGroup;
+			children = (
+				A1F04BB1244C7C8E009CB614 /* VillainsTableViewController.swift */,
+				A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */,
+				A14335B124535F3100012C8D /* VillainsTableViewCell.swift */,
+			);
+			path = Villains;
+			sourceTree = "<group>";
+		};
 		A16E6298244F9F4A00DDBA5C /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				A1B407B0244CD628009A213E /* UIViewController+Extensions.swift */,
-				A1F04B9C244C7995009CB614 /* HeroesTableViewController.swift */,
-				A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */,
-				A1F04B9E244C7995009CB614 /* BattlesTableViewController.swift */,
-				A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */,
-				A1F04BB1244C7C8E009CB614 /* VillainsTableViewController.swift */,
-				A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */,
+				A14335B324535F4800012C8D /* Heroes */,
+				A14335B424535F5E00012C8D /* Battles */,
+				A14335B524535F6800012C8D /* Villains */,
 				A1C6D0622450D5D4009444E4 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
@@ -227,14 +260,17 @@
 				A1C6D0612450C693009444E4 /* DataManager.swift in Sources */,
 				A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */,
 				A1F04B9D244C7995009CB614 /* HeroesTableViewController.swift in Sources */,
+				A14335B224535F3100012C8D /* VillainsTableViewCell.swift in Sources */,
 				A1F04B99244C7995009CB614 /* AppDelegate.swift in Sources */,
 				A193E1CF244E037A002B907E /* BattlesDetailViewController.swift in Sources */,
 				A1B407B1244CD628009A213E /* UIViewController+Extensions.swift in Sources */,
+				A14335B024535F1E00012C8D /* BattlesTableViewCell.swift in Sources */,
 				A1C6D0632450D5D4009444E4 /* MainTabBarController.swift in Sources */,
 				A1F04B9B244C7995009CB614 /* SceneDelegate.swift in Sources */,
 				A1F04BB2244C7C8E009CB614 /* VillainsTableViewController.swift in Sources */,
 				A193E1CD244DFE04002B907E /* HeroesDetailViewController.swift in Sources */,
 				A1F04BA5244C7995009CB614 /* AvengersApp.xcdatamodeld in Sources */,
+				A14335AE24535F0E00012C8D /* HeroesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

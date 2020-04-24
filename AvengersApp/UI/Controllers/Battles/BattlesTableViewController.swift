@@ -23,15 +23,30 @@ class BattlesTableViewController: UITableViewController {
 
           override func numberOfSections(in tableView: UITableView) -> Int {
               // #warning Incomplete implementation, return the number of sections
-              return 1
-          }
-
-          override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-              // #warning Incomplete implementation, return the number of rows
               return 6
           }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+    
+          override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+              // #warning Incomplete implementation, return the number of rows
+              return 1
+          }
+    
+        override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let headerView = UIView(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 45))
+            headerView.backgroundColor = UIColor(hexString: "#F0A761")
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width:tableView.bounds.size.width, height: 45))
+            label.textColor = UIColor.white
+            label.textAlignment = .center
+            label.text = "Batalla \(section + 1)"
+            headerView.addSubview(label)
+            return headerView
+        }
           
+    
           override func prepare(for segue: UIStoryboardSegue, sender: Any?)
           {
                if (segue.identifier == "SEGUE_FROM_BATTLES_TO_DETAIL") {
