@@ -1,0 +1,63 @@
+{
+ work:-{
+ base:"New York, New York",
+ occupation:"Freelance photographer, teacher"
+ },
+ powerstats:-{
+ power:"74",
+ speed:"67",
+ strength:"55",
+ intelligence:"90",
+ durability:"75",
+ combat:"85"
+ },
+ id:"620",
+ appearance:-{
+ gender:"Male",
+ eye-color:"Hazel",
+ race:"Human",
+ height:-[
+"5'10",
+"178 cm"
+ ],
+ weight:-[
+"165 lb",
+"74 kg"
+ ],
+ hair-color:"Brown"
+ },
+ connections:-{
+ group-affiliation:"Member of the Avengers, formerly member of Outlaws, alternate Fantastic Four",
+ relatives:"Richard Parker (father, deceased), Mary Parker(mother, deceased), Benjamin Parker (uncle, deceased), May Parker (aunt), Mary Jane Watson-Parker (wife), May Parker (daughter, allegedly deceased)"
+ },
+ image:-{
+ url:"https://www.superherodb.com/pictures2/portraits/10/100/133.jpg"
+ },
+ response:"success",
+ biography:-{
+ place-of-birth:"New York, New York",
+ first-appearance:"Amazing Fantasy #15",
+ aliases:-[
+"Spiderman",
+"Bag-Man",
+"Black Marvel",
+"Captain Universe",
+"Dusk",
+"Green Hood",
+"Hornet",
+"Mad Dog 336",
+"Peter Palmer",
+"Prodigy",
+"Ricochet",
+"Scarlet Spider",
+"Spider-Boy",
+"Spider-Hulk",
+"Spider-Morphosis"
+ ],
+ full-name:"Peter Parker",
+ publisher:"Marvel Comics",
+ alignment:"good",
+ alter-egos:"No alter egos found."
+ },
+ name:"Spider-Man"
+ }

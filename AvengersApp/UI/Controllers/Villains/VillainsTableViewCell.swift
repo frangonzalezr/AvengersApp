@@ -11,4 +11,6 @@ import UIKit
 class VillainsTableViewCell: UITableViewCell{
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var villainImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var powerStars: UIImageView!
 }

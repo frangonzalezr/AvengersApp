@@ -1,0 +1,44 @@
+[
+    {
+        "id": 232,
+        "name": "Dormammu",
+        "image": "img_villain_dormammu",
+        "power": 5,
+        "summary": "Despot, conqueror. Group Affiliation: Lords of the Splinter Realms, Lords of the Netherworlds; allied with Umar, Loki, Doctor Doom, Underchild, others"
+    },
+    {
+        "id": 235,
+        "name": "Ego",
+        "image": "img_villain_ego",
+        "power": 5,
+        "summary": "Inapplicable."
+    },
+    {
+        "id": 321,
+        "name": "Hela",
+        "image": "img_villain_hela",
+        "power": 4,
+        "summary": "Asgardian Goddess of Death, former Ruler of Hel and Niffleheim"
+    },
+    {
+        "id": 550,
+        "name": "Johann Shmidt",
+        "image": "img_villain_johann_schmidt",
+        "power": 4,
+        "summary": "Red Skull. Group Affiliation: Special operative in the government of Germany's Third Reich, former leader of most currently active Nazi subversives throughout the world, former ally of THEM and A.I.M., former leader of the Nevada-based fragment of Hydra, leader of the People's Militia"
+    },
+    {
+        "id": 655,
+        "name": "Thanos",
+        "image": "img_villain_thanos",
+        "power": 3,
+        "summary": "Conqueror, worshiper of Death. Group Affiliation: Zodiac (ally); formerly Infinity Watch, Defenders"
+    },
+    {
+        "id": 680,
+        "name": "Ultron",
+        "image": "img_villain_ultron",
+        "power": 3,
+        "summary": "Mass murderer, scientist, would-be world conqueror, ruler of Phalanx. Group Affiliation: Phalanx; formerly Sons of Yinsen, Lethal Legion, Masters of Evil"
+    }
+]

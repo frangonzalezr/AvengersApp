@@ -1,0 +1,53 @@
+{
+ work:-{
+ base:"Avengers Mansion",
+ occupation:"Former National Aeronautics and Space Administration security Chief, former magazine editor, former freelance writer, former military intelligence officer."
+ },
+ powerstats:-{
+ power:"100",
+ speed:"71",
+ strength:"88",
+ intelligence:"84",
+ durability:"95",
+ combat:"90"
+ },
+ id:"157",
+ appearance:-{
+ gender:"Female",
+ eye-color:"Blue",
+ race:"Human-Kree",
+ height:-[
+"5'11",
+"180 cm"
+ ],
+ weight:-[
+"165 lb",
+"74 kg"
+ ],
+ hair-color:"Blond"
+ },
+ connections:-{
+ group-affiliation:"currently Avengers, former companion to the X-Men (as Carol Danvers), former member of the Starjammers (as Binary), Former Avenger (as Ms. Marvel)",
+ relatives:"Marie Danvers (mother), Joseph Danvers, Sr. (father), Joseph Danvers, Jr. (brother), Steve Danvers (brother, deceased), Marcus Immortus (Danvers) ("son", deceased)"
+ },
+ image:-{
+ url:"https://www.superherodb.com/pictures2/portraits/10/100/103.jpg"
+ },
+ response:"success",
+ biography:-{
+ place-of-birth:"Boston, Massachusetts",
+ first-appearance:"Ms. Marvel #1",
+ aliases:-[
+"Ace",
+"Binary",
+"Lady Marvel",
+"Warbird",
+"others used during her espionage career"
+ ],
+ full-name:"Carol Danvers",
+ publisher:"Binary",
+ alignment:"good",
+ alter-egos:"Binary, Warbird"
+ },
+ name:"Captain Marvel"
+ }

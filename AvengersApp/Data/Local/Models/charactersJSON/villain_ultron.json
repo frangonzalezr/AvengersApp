@@ -1,0 +1,58 @@
+{
+ work:-{
+ base:"-",
+ occupation:"Mass murderer, scientist, would-be world conqueror, ruler of Phalanx"
+ },
+ powerstats:-{
+ power:"100",
+ speed:"42",
+ strength:"83",
+ intelligence:"88",
+ durability:"100",
+ combat:"64"
+ },
+ id:"680",
+ appearance:-{
+ gender:"Male",
+ eye-color:"Red",
+ race:"Android",
+ height:-[
+"6'9",
+"206 cm"
+ ],
+ weight:-[
+"735 lb",
+"331 kg"
+ ],
+ hair-color:"-"
+ },
+ connections:-{
+ group-affiliation:"Phalanx; formerly Sons of Yinsen, Lethal Legion, Masters of Evil",
+ relatives:"Hank Pym (Yellowjacket, creator, "father"), Janet Van Dyne (Wasp, regarded by Ultron as "mother" due to marriage to Pym), Jocasta (creation, former mate), Alkhema (creation, former mate, deactivated), Vision (creation, "son"), Victor Mancha (creation, son), Rex (creation, pet, deactivated), Robos & Bio-Synthezoids (creations of Alkhema, "grandchildren";, destroyed); Simon Williams (Wonder Man), Eric Williams (Grim Reaper) & Wanda Maximoff (Scarlet Witch), all regarded by Ultron as part of his "extended family" due to their familial connections with the Vision"
+ },
+ image:-{
+ url:"https://www.superherodb.com/pictures2/portraits/10/100/1339.jpg"
+ },
+ response:"success",
+ biography:-{
+ place-of-birth:"Created in Cresskill, New Jersey",
+ first-appearance:"Avengers #54 (July, 1968)",
+ aliases:-[
+"Crimson Cowl",
+"Great Devil",
+"Great Ultron",
+"Iron Man",
+"Mark",
+"Omega",
+"Ultimate Ultron",
+"Ultron-5 (and hundreds of other sequential numerical designations)",
+"Ultron Mark Twelve",
+"Ho Yinsen"
+ ],
+ full-name:"Ultron",
+ publisher:"Marvel Comics",
+ alignment:"bad",
+ alter-egos:"No alter egos found."
+ },
+ name:"Ultron"
+ }

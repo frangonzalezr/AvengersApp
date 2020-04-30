@@ -1,0 +1,57 @@
+{
+ work:-{
+ base:"-",
+ occupation:"-"
+ },
+ powerstats:-{
+ power:"19",
+ speed:"12",
+ strength:"10",
+ intelligence:"75",
+ durability:"14",
+ combat:"80"
+ },
+ id:"550",
+ appearance:-{
+ gender:"Male",
+ eye-color:"Blue",
+ race:"null",
+ height:-[
+"6'2",
+"188 cm"
+ ],
+ weight:-[
+"240 lb",
+"108 kg"
+ ],
+ hair-color:"No Hair"
+ },
+ connections:-{
+ group-affiliation:"Special operative in the government of Germany's Third Reich, former leader of most currently active Nazi subversives throughout the world, former ally of THEM and A.I.M., former leader of the Nevada-based fragment of Hydra, leader of the People's Militia",
+ relatives:"Hermann Shmidt (father, deceased), Martha Shmidt (mother, deceased), Sinthea Shmidt (Mother Superior/Sin, daughter)"
+ },
+ image:-{
+ url:"https://www.superherodb.com/pictures2/portraits/10/100/1392.jpg"
+ },
+ response:"success",
+ biography:-{
+ place-of-birth:"An unidentified village in Germany",
+ first-appearance:"Captain America Comics #1 (1941), (modern) Tales of Suspense #66 (1965)",
+ aliases:-[
+"Dell Rusk",
+"Bettman P. Lyles",
+"the Agent of a Thousand Faces",
+"The Man",
+"Cyrus Fenton",
+"Teacher",
+"Tod March",
+"John Smith",
+"Aleksander Lukin."
+ ],
+ full-name:"Johann Shmidt",
+ publisher:"Marvel Comics",
+ alignment:"bad",
+ alter-egos:"No alter egos found."
+ },
+ name:"Red Skull"
+ }

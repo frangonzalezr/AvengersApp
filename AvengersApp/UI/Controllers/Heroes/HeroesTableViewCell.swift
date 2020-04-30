@@ -12,6 +12,10 @@ class HeroesTableViewCell: UITableViewCell{
  
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var heroImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var powerStars: UIImageView!
     
     
 }
+
+

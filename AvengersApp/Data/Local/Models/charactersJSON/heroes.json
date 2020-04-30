@@ -1,0 +1,72 @@
+[
+    {
+        "id": 149,
+        "name": "Captain America",
+        "image": "img_heroe_america_captain",
+        "power": 5,
+        "summary": "Adventurer, federal official, intelligence operative; former soldier, Hydra agent, liaison between S.H.I.E.L.D. and the Avengers, police officer, teacher, sparring partner. Group affiliation: Secret Avengers (Black OPS Unit Formerly,The Avengers, Secret Avengers (Civil War), New Avengers, formerly The Invaders, Secret Defenders The Redeemers; formerly partner of Bucky, Golden Girl, Rick Jones, Falcon, Demolition-Man and Nomad (Jack Monroe)"
+    },
+    {
+        "id": 106,
+        "name": "Black Panther",
+        "image": "img_heroe_black_panther",
+        "power": 5,
+        "summary": "King and Chieftain of Wakanda, scientist; former school teacher. Group affiliation: Formerly Fantastic Four, Secret Avengers, Avengers, Pendragons, Queen's Vengeance, former Fantastic Force financier"
+    },
+    {
+        "id": 107,
+        "name": "Black Widow",
+        "image": "img_heroe_black_widow",
+        "power": 4,
+        "summary": "Adventurer, Intelligence agent, former ballerina. Group affiliation: Secret Avengers; formerly Thunderbolts (as Yelena Belova), Nick Fury, Mighty Avengers, S.H.I.E.L.D., Avengers, Champions of Los Angeles, Lady Liberators, KGB, Marvel Knights, partner of Daredevil, Hawkeye, Boris Turgenov, Logan"
+    },
+    {
+        "id": 226,
+        "name": "Doctor Strange",
+        "image": "img_heroe_dr_strange",
+        "power": 4,
+        "summary": "Sorcerer Supreme, retired neurosurgeon. Group affiliation: Defenders, underground Avengers; formerly the Order, Midnight Sons; former disciple of the Ancient One"
+    },
+    {
+        "id": 275,
+        "name": "Gamora",
+        "image": "img_heroe_gamora",
+        "power": 3,
+        "summary": "Assassin, mercenary, adventurer. Group affiliation: Guardians of the Galaxy ; formerly Phalanx's Selects, Graces (Leader), Infinity Watch ; United Front ; former minion of Thanos; ally of Adam Warlock and Pip the Troll"
+    },
+    {
+        "id": 332,
+        "name": "Hulk",
+        "image": "img_heroe_hulk",
+        "power": 3,
+        "summary": "Nuclear physicist, Agent of S.H.I.E.L.D. Group affiliation: Defenders, former leader of the new Hulkbusters, member of the Avengers, Pantheon, Titans Three, the Order, Hulkbusters of Counter-Earth-Franklin, alternate Fantastic Four"
+    },
+    {
+        "id": 346,
+        "name": "Iron Man",
+        "image": "img_heroe_ironman",
+        "power": 2,
+        "summary": "Inventor, Industrialist; former United States Secretary of Defense. Group affiliation: Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense."
+    },
+    {
+        "id": 156,
+        "name": "Captain Marvel",
+        "image": "img_heroe_marvel_captain",
+        "power": 2,
+        "summary": "Former National Aeronautics and Space Administration security Chief, former magazine editor, former freelance writer, former military intelligence officer. Group affiliation: Marvel Family, Justice Society of America currently Avengers, former companion to the X-Men (as Carol Danvers), former member of the Starjammers (as Binary), Former Avenger (as Ms. Marvel)"
+    },
+    {
+        "id": 620,
+        "name": "Spider-Man",
+        "image": "img_heroe_spiderman",
+        "power": 2,
+        "summary": "Freelance photographer, teacher. Group affiliation: Member of the Avengers, formerly member of Outlaws, alternate Fantastic Four"
+    },
+    {
+        "id": 659,
+        "name": "Thor",
+        "image": "img_heroe_thor",
+        "power": 2,
+        "summary": "King of Asgard; formerly EMS Technician; Physician. Group affiliation: Avengers"
+    }
+]

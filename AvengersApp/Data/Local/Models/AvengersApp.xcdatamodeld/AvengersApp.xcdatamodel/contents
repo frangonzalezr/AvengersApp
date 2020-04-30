@@ -8,20 +8,22 @@
         <attribute name="winner" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Heroes" representedClassName="Heroes" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Villains" representedClassName="Villains" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Heroes" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Villains" positionX="-54" positionY="-9" width="128" height="103"/>
         <element name="Battles" positionX="-36" positionY="36" width="128" height="118"/>
+        <element name="Heroes" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Villains" positionX="-54" positionY="-9" width="128" height="118"/>
     </elements>
 </model>

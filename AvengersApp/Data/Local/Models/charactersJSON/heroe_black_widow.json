@@ -1,0 +1,59 @@
+{
+ work:-{
+ base:"Mobile",
+ occupation:"Adventurer, Intelligence agent, former ballerina"
+ },
+ powerstats:-{
+ power:"36",
+ speed:"33",
+ strength:"13",
+ intelligence:"75",
+ durability:"30",
+ combat:"100"
+ },
+ id:"107",
+ appearance:-{
+ gender:"Female",
+ eye-color:"Green",
+ race:"Human",
+ height:-[
+"5'7",
+"170 cm"
+ ],
+ weight:-[
+"131 lb",
+"59 kg"
+ ],
+ hair-color:"Auburn"
+ },
+ connections:-{
+ group-affiliation:"Secret Avengers; formerly Thunderbolts (as Yelena Belova), Nick Fury, Mighty Avengers, S.H.I.E.L.D., Avengers, Champions of Los Angeles, Lady Liberators, KGB, "Marvel Knights", partner of Daredevil, Hawkeye, Boris Turgenov, Logan",
+ relatives:"Unnamed parents (presumed deceased); Alexi Shostakov (Red Guardian, estranged husband); Vindiktor (alleged brother, deceased)"
+ },
+ image:-{
+ url:"https://www.superherodb.com/pictures2/portraits/10/100/248.jpg"
+ },
+ response:"success",
+ biography:-{
+ place-of-birth:"-",
+ first-appearance:"Tales of Suspense #52",
+ aliases:-[
+"Yelena Belova",
+"Natasha Romanoff",
+"Natasha",
+"Tasha",
+"Madame Natasha",
+"Nancy Rushman",
+"Laura Matthers",
+"Nadine Roman",
+""Oktober"",
+"Black Pearl",
+"Ebon Flame"
+ ],
+ full-name:"Natasha Romanoff",
+ publisher:"Marvel Comics",
+ alignment:"good",
+ alter-egos:"No alter egos found."
+ },
+ name:"Black Widow"
+ }

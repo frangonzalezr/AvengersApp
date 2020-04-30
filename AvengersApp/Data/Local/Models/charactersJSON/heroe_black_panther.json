@@ -1,0 +1,55 @@
+{
+ work:-{
+ base:"Wakanda, Mobile",
+ occupation:"King and Chieftain of Wakanda, scientist; former school teacher"
+ },
+ powerstats:-{
+ power:"41",
+ speed:"30",
+ strength:"16",
+ intelligence:"88",
+ durability:"60",
+ combat:"100"
+ },
+ id:"106",
+ appearance:-{
+ gender:"Male",
+ eye-color:"Brown",
+ race:"Human",
+ height:-[
+"6'0",
+"183 cm"
+ ],
+ weight:-[
+"200 lb",
+"90 kg"
+ ],
+ hair-color:"Black"
+ },
+ connections:-{
+ group-affiliation:"Formerly Fantastic Four, Secret Avengers, Avengers, Pendragons, Queen's Vengeance, former Fantastic Force financier",
+ relatives:"Bashenga (paternal ancestor, deceased), Azzuri the Wise (paternal grandfather, deceased), Nanali (paternal grandmother, deceased), Chanda (paternal grandfather, presumably deceased), T�Chaka (father, deceased), S'Yan (uncle, deceased), N�Yami (mother, deceased), Ramonda (stepmother), Hunter (adopted brother), Jakarra (half-brother), Shuri (sister), Ororo Munroe (wife), Joshua Itobo, Ishanta, Zuni, M'Koni, T'Shan (cousins), Wheeler (cousin by marriage, deceased), Billy Wheeler (1st cousin once removed)"
+ },
+ image:-{
+ url:"https://www.superherodb.com/pictures2/portraits/10/100/247.jpg"
+ },
+ response:"success",
+ biography:-{
+ place-of-birth:"Wakanda, Africa",
+ first-appearance:"Fantastic Four Vol. 1 #52 (1966)",
+ aliases:-[
+"Mr. Okonkwo",
+"The Man Without Fear",
+"Luke Charles",
+"Black Leopard",
+"the Client",
+"Coal Tiger",
+"has impersonated Daredevil and others on occasion"
+ ],
+ full-name:"T'Challa",
+ publisher:"Marvel Comics",
+ alignment:"good",
+ alter-egos:"No alter egos found."
+ },
+ name:"Black Panther"
+ }
