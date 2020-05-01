@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Edit Power View Controller-->
         <scene sceneID="VK9-Mk-emf">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="x5e-55-lDE" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="x5e-55-lDE" customClass="EditPowerViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z5t-yd-sZp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,35 +24,50 @@
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-2N-xKh">
-                                        <rect key="frame" x="172.5" y="73" width="29" height="27"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-2N-xKh">
+                                        <rect key="frame" x="170" y="73" width="34.5" height="32"/>
                                         <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="olx-HC-NMD"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0d-Lw-zX9">
-                                        <rect key="frame" x="136" y="73" width="29" height="27"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star2" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0d-Lw-zX9">
+                                        <rect key="frame" x="128" y="73" width="34.5" height="32"/>
                                         <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="RJ0-fZ-KH0"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiX-CQ-cLK">
-                                        <rect key="frame" x="99" y="73" width="29" height="27"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiX-CQ-cLK">
+                                        <rect key="frame" x="85.5" y="73" width="34.5" height="32"/>
                                         <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="cSO-47-jsc"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLr-bD-NX6">
-                                        <rect key="frame" x="210" y="73" width="29" height="27"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star4" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLr-bD-NX6">
+                                        <rect key="frame" x="213" y="73" width="34.5" height="32"/>
                                         <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="DvU-Qt-0BE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raq-Pa-hUa">
-                                        <rect key="frame" x="247" y="73" width="29" height="27"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star5" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raq-Pa-hUa">
+                                        <rect key="frame" x="255.5" y="73" width="34.5" height="32"/>
                                         <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="lfY-2Y-a9r"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWm-IV-5cI">
                                         <rect key="frame" x="35" y="160" width="90" height="35"/>
@@ -64,6 +79,9 @@
                                         <state key="normal" title="Cancelar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelEditPower:" destination="x5e-55-lDE" eventType="touchUpInside" id="4rR-5c-bb1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr8-jY-WyJ">
                                         <rect key="frame" x="249" y="160" width="90" height="35"/>
@@ -75,6 +93,9 @@
                                         <state key="normal" title="Guardar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveEditPower:" destination="x5e-55-lDE" eventType="touchUpInside" id="g0I-IM-62R"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -107,6 +128,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cV1-r8-1WM"/>
                     </view>
+                    <connections>
+                        <outlet property="star1Button" destination="xiX-CQ-cLK" id="RvH-5P-lsE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLi-Mk-e9w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
