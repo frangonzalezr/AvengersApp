@@ -24,51 +24,6 @@
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-2N-xKh">
-                                        <rect key="frame" x="170" y="73" width="34.5" height="32"/>
-                                        <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="olx-HC-NMD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star2" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0d-Lw-zX9">
-                                        <rect key="frame" x="128" y="73" width="34.5" height="32"/>
-                                        <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="RJ0-fZ-KH0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiX-CQ-cLK">
-                                        <rect key="frame" x="85.5" y="73" width="34.5" height="32"/>
-                                        <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="cSO-47-jsc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star4" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLr-bD-NX6">
-                                        <rect key="frame" x="213" y="73" width="34.5" height="32"/>
-                                        <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="DvU-Qt-0BE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="star5" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raq-Pa-hUa">
-                                        <rect key="frame" x="255.5" y="73" width="34.5" height="32"/>
-                                        <state key="normal" image="star" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changePower:" destination="x5e-55-lDE" eventType="touchUpInside" id="lfY-2Y-a9r"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWm-IV-5cI">
                                         <rect key="frame" x="35" y="160" width="90" height="35"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,26 +52,40 @@
                                             <action selector="saveEditPower:" destination="x5e-55-lDE" eventType="touchUpInside" id="g0I-IM-62R"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4it-PT-fsT" customClass="FloatRatingView" customModule="AvengersApp">
+                                        <rect key="frame" x="16" y="91" width="342" height="44"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Lrm-q2-Q8b"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="StarEmpty"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="StarFull"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="raq-Pa-hUa" firstAttribute="leading" secondItem="kLr-bD-NX6" secondAttribute="trailing" constant="8" id="0eX-Y8-b2e"/>
-                                    <constraint firstItem="T3m-2N-xKh" firstAttribute="centerX" secondItem="SWU-hb-yiE" secondAttribute="centerX" id="4Kg-5L-IsB"/>
                                     <constraint firstAttribute="bottom" secondItem="JWm-IV-5cI" secondAttribute="bottom" constant="30" id="5QR-UM-tde"/>
-                                    <constraint firstItem="kLr-bD-NX6" firstAttribute="leading" secondItem="T3m-2N-xKh" secondAttribute="trailing" constant="8.5" id="7g5-ww-Z9E"/>
-                                    <constraint firstItem="kLr-bD-NX6" firstAttribute="centerY" secondItem="T3m-2N-xKh" secondAttribute="centerY" id="GHH-Rl-SBz"/>
-                                    <constraint firstItem="T3m-2N-xKh" firstAttribute="top" secondItem="0O0-ia-erg" secondAttribute="bottom" constant="43" id="L0z-kb-Ase"/>
                                     <constraint firstItem="0O0-ia-erg" firstAttribute="centerX" secondItem="SWU-hb-yiE" secondAttribute="centerX" id="L2V-P8-4HA"/>
                                     <constraint firstItem="0O0-ia-erg" firstAttribute="top" secondItem="SWU-hb-yiE" secondAttribute="top" constant="8" id="Lu7-Xr-mD7"/>
-                                    <constraint firstItem="t0d-Lw-zX9" firstAttribute="centerY" secondItem="T3m-2N-xKh" secondAttribute="centerY" id="RXt-H6-MPE"/>
+                                    <constraint firstItem="4it-PT-fsT" firstAttribute="leading" secondItem="SWU-hb-yiE" secondAttribute="leading" constant="16" id="Mze-5Y-vPU"/>
+                                    <constraint firstItem="JWm-IV-5cI" firstAttribute="top" secondItem="4it-PT-fsT" secondAttribute="bottom" constant="25" id="U6N-af-XQV"/>
                                     <constraint firstAttribute="width" secondItem="SWU-hb-yiE" secondAttribute="height" multiplier="374:225" id="Vl1-yy-yar"/>
                                     <constraint firstAttribute="trailing" secondItem="dr8-jY-WyJ" secondAttribute="trailing" constant="35" id="XI7-FI-Qaw"/>
+                                    <constraint firstItem="4it-PT-fsT" firstAttribute="centerX" secondItem="0O0-ia-erg" secondAttribute="centerX" id="Yyh-9u-Hpx"/>
                                     <constraint firstItem="JWm-IV-5cI" firstAttribute="leading" secondItem="SWU-hb-yiE" secondAttribute="leading" constant="35" id="Z0H-sz-I7m"/>
-                                    <constraint firstItem="T3m-2N-xKh" firstAttribute="leading" secondItem="t0d-Lw-zX9" secondAttribute="trailing" constant="7.5" id="ceF-lw-YYv"/>
                                     <constraint firstAttribute="bottom" secondItem="dr8-jY-WyJ" secondAttribute="bottom" constant="30" id="gYA-Md-OLa"/>
-                                    <constraint firstItem="raq-Pa-hUa" firstAttribute="centerY" secondItem="kLr-bD-NX6" secondAttribute="centerY" id="pAk-RA-Udi"/>
-                                    <constraint firstItem="xiX-CQ-cLK" firstAttribute="centerY" secondItem="t0d-Lw-zX9" secondAttribute="centerY" id="qLh-zb-K1j"/>
-                                    <constraint firstItem="t0d-Lw-zX9" firstAttribute="leading" secondItem="xiX-CQ-cLK" secondAttribute="trailing" constant="8" id="xoc-Ju-ROX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -124,12 +93,11 @@
                             <constraint firstItem="SWU-hb-yiE" firstAttribute="leading" secondItem="cV1-r8-1WM" secondAttribute="leading" constant="20" id="1mr-3c-6Ra"/>
                             <constraint firstItem="SWU-hb-yiE" firstAttribute="centerY" secondItem="Z5t-yd-sZp" secondAttribute="centerY" id="aTe-Je-VMa"/>
                             <constraint firstItem="cV1-r8-1WM" firstAttribute="trailing" secondItem="SWU-hb-yiE" secondAttribute="trailing" constant="20" id="qbL-5D-G99"/>
-                            <constraint firstItem="SWU-hb-yiE" firstAttribute="centerX" secondItem="Z5t-yd-sZp" secondAttribute="centerX" id="uUy-py-VBc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cV1-r8-1WM"/>
                     </view>
                     <connections>
-                        <outlet property="star1Button" destination="xiX-CQ-cLK" id="RvH-5P-lsE"/>
+                        <outlet property="floatRatingView" destination="4it-PT-fsT" id="Jmk-fR-3s1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLi-Mk-e9w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,6 +106,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="StarEmpty" width="22" height="22"/>
+        <image name="StarFull" width="22" height="22"/>
     </resources>
 </document>

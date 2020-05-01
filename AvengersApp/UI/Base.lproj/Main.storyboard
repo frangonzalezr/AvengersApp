@@ -251,7 +251,7 @@
                                 </constraints>
                                 <state key="normal" image="pencil" catalog="system"/>
                                 <connections>
-                                    <segue destination="x3i-db-CEs" kind="presentation" id="GOK-vO-0hR"/>
+                                    <segue destination="x3i-db-CEs" kind="presentation" identifier="SEGUE_FROM_VILLAIN_POWER_TO_EDITPOWER" id="GOK-vO-0hR"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3il-BZ-J7E">
@@ -514,7 +514,7 @@
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="black"/>
                                             </state>
                                             <connections>
-                                                <segue destination="NID-oH-ohv" kind="presentation" id="U5q-hr-Uwv"/>
+                                                <segue destination="NID-oH-ohv" kind="presentation" identifier="SEGUE_FROM_HERO_POWER_TO_EDITPOWER" id="U5q-hr-Uwv"/>
                                             </connections>
                                         </button>
                                     </subviews>

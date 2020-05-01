@@ -10,19 +10,21 @@ import UIKit
 
 class EditPowerViewController: UIViewController {
     
-    @IBOutlet weak var star1Button: UIButton!
-    @IBAction func changePower(_ sender: UIButton) {
-        let image = sender.currentImage
-        print("PULSAMOS LA ESTRELLA \(sender.restorationIdentifier ?? "") CON IMAGEN \(String(describing: image))")
-        
-        let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .black, scale: .large)
-        if image == UIImage(systemName: "star", withConfiguration: largeConfig) {
-            sender.setImage(UIImage(systemName: "star.fill", withConfiguration: largeConfig), for: .normal)
-        } else {
-            sender.setImage(UIImage(systemName: "star", withConfiguration: largeConfig), for: .normal)
-        }
+    @IBOutlet weak var floatRatingView: FloatRatingView!
+    
+    var power: Double?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        floatRatingView.backgroundColor = UIColor.clear
+        floatRatingView.delegate = self
+        floatRatingView.contentMode = UIView.ContentMode.scaleAspectFit
+        floatRatingView.type = .wholeRatings
+        floatRatingView.rating = power ?? 2.5
         
     }
+
     
     @IBAction func cancelEditPower(_ sender: UIButton) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -31,4 +33,19 @@ class EditPowerViewController: UIViewController {
     @IBAction func saveEditPower(_ sender: UIButton) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+}
+extension EditPowerViewController: FloatRatingViewDelegate {
+
+    // MARK: FloatRatingViewDelegate
+    
+    func floatRatingView(_ ratingView: FloatRatingView, isUpdating rating: Double) {
+        self.power = self.floatRatingView.rating
+        print("Live Rating: \(self.power ?? 2.5)")
+    }
+    
+    func floatRatingView(_ ratingView: FloatRatingView, didUpdate rating: Double) {
+        self.power = self.floatRatingView.rating
+        print("Updated Rating: \(self.power ?? 2.5)")
+    }
+    
 }

@@ -63,6 +63,15 @@ class HeroesDetailViewController: UITableViewController {
        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+         if (segue.identifier == "SEGUE_FROM_HERO_POWER_TO_EDITPOWER") {
+                guard let destinationVC = segue.destination as? EditPowerViewController else { return }
+                destinationVC.power = Double(hero!.power)
+        }
+        
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.section {

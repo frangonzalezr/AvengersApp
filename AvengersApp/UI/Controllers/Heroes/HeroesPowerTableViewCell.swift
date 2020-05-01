@@ -11,4 +11,5 @@ import UIKit
 class HeroesPowerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var powerStars: UIImageView!
+    
 }

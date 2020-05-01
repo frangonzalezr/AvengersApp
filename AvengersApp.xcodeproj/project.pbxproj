@@ -31,6 +31,7 @@
 		A1792ED024574D330090C396 /* villain_johann_schmidt.json in Resources */ = {isa = PBXBuildFile; fileRef = A1792ECF24574D330090C396 /* villain_johann_schmidt.json */; };
 		A1792EDB245767BF0090C396 /* EditPower.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1792EDA245767BF0090C396 /* EditPower.storyboard */; };
 		A1792EDD24576B270090C396 /* AddBattle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1792EDC24576B270090C396 /* AddBattle.storyboard */; };
+		A1857380245C55C00005762A /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185737F245C55C00005762A /* FloatRatingView.swift */; };
 		A193E1CD244DFE04002B907E /* HeroesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */; };
 		A193E1CF244E037A002B907E /* BattlesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */; };
 		A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */; };
@@ -85,6 +86,7 @@
 		A1792ECF24574D330090C396 /* villain_johann_schmidt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = villain_johann_schmidt.json; sourceTree = "<group>"; };
 		A1792EDA245767BF0090C396 /* EditPower.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditPower.storyboard; sourceTree = "<group>"; };
 		A1792EDC24576B270090C396 /* AddBattle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBattle.storyboard; sourceTree = "<group>"; };
+		A185737F245C55C00005762A /* FloatRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDetailViewController.swift; sourceTree = "<group>"; };
 		A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesDetailViewController.swift; sourceTree = "<group>"; };
 		A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsDetailViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B407B0244CD628009A213E /* UIViewController+Extensions.swift */,
+				A185737F245C55C00005762A /* FloatRatingView.swift */,
 				A14335B324535F4800012C8D /* Heroes */,
 				A14335B424535F5E00012C8D /* Battles */,
 				A14335B524535F6800012C8D /* Villains */,
@@ -390,6 +393,7 @@
 				A1BFD2DD2455FEBB00AEA577 /* BattleCell.swift in Sources */,
 				A1BFD2D72455E9BF00AEA577 /* HeroesImageTableViewCell.swift in Sources */,
 				A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */,
+				A1857380245C55C00005762A /* FloatRatingView.swift in Sources */,
 				A1F04B9D244C7995009CB614 /* HeroesTableViewController.swift in Sources */,
 				A14335B224535F3100012C8D /* VillainsTableViewCell.swift in Sources */,
 				A1F04B99244C7995009CB614 /* AppDelegate.swift in Sources */,

@@ -45,6 +45,15 @@ class VillainsDetailViewController: UIViewController, UICollectionViewDataSource
         collectionView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+         if (segue.identifier == "SEGUE_FROM_VILLAIN_POWER_TO_EDITPOWER") {
+                guard let destinationVC = segue.destination as? EditPowerViewController else { return }
+                destinationVC.power = Double(villain!.power)
+        }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BattleCell
         cell.backgroundColor = .red
