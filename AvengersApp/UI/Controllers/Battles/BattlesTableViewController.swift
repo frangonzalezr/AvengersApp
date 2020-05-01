@@ -10,14 +10,13 @@ import UIKit
 
 class BattlesTableViewController: UITableViewController {
     var cellColors = ["#F28044","#F0A761","#FEC362","#F0BB4C","#E3CB92","#FEA375"]
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 150
-            // Uncomment the following line to preserve selection between presentations
-            // self.clearsSelectionOnViewWillAppear = false
+        self.tableView.rowHeight = 100
 
-            // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-            // self.navigationItem.rightBarButtonItem = self.editButtonItem
         }
         // MARK: - Table view data source
 

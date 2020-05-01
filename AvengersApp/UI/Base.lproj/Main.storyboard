@@ -67,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndc-6p-q6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708.69565217391312" y="-477.45535714285711"/>
+            <point key="canvasLocation" x="686" y="-477"/>
         </scene>
         <!--Batallas-->
         <scene sceneID="pPO-Pi-ctW">
@@ -85,38 +85,56 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X8d-Wz-Vbt">
-                                            <rect key="frame" x="20" y="0.0" width="135" height="85"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_heroe_america_captain" translatesAutoresizingMaskIntoConstraints="NO" id="X8d-Wz-Vbt">
+                                            <rect key="frame" x="37" y="0.0" width="118" height="74"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="135" id="jTV-iP-AJZ"/>
+                                                <constraint firstAttribute="width" constant="118" id="jTV-iP-AJZ"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a1w-NW-gC5">
-                                            <rect key="frame" x="259" y="0.0" width="135" height="85"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_villain_dormammu" translatesAutoresizingMaskIntoConstraints="NO" id="a1w-NW-gC5">
+                                            <rect key="frame" x="259" y="0.0" width="118" height="74"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="135" id="3IU-cc-qj3"/>
+                                                <constraint firstAttribute="width" constant="118" id="3IU-cc-qj3"/>
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_battle_round" translatesAutoresizingMaskIntoConstraints="NO" id="lS2-iH-17o">
                                             <rect key="frame" x="156" y="0.0" width="102" height="85"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-qy-R34">
+                                            <rect key="frame" x="37" y="76" width="118" height="9"/>
+                                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lg5-Yi-nNM">
+                                            <rect key="frame" x="259" y="76" width="118" height="9"/>
+                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="FBf-qy-R34" firstAttribute="leading" secondItem="X8d-Wz-Vbt" secondAttribute="leading" id="3uK-Yj-hlj"/>
+                                        <constraint firstItem="lg5-Yi-nNM" firstAttribute="width" secondItem="a1w-NW-gC5" secondAttribute="width" id="4qV-4M-qBY"/>
+                                        <constraint firstAttribute="bottom" secondItem="lg5-Yi-nNM" secondAttribute="bottom" id="7rF-y3-pZv"/>
                                         <constraint firstItem="lS2-iH-17o" firstAttribute="centerX" secondItem="2jD-tx-hv9" secondAttribute="centerX" id="7yp-S0-JET"/>
+                                        <constraint firstItem="FBf-qy-R34" firstAttribute="width" secondItem="X8d-Wz-Vbt" secondAttribute="width" id="9v3-bW-Ba0"/>
                                         <constraint firstItem="lS2-iH-17o" firstAttribute="leading" secondItem="X8d-Wz-Vbt" secondAttribute="trailing" constant="1" id="Brf-S5-j1Z"/>
-                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="centerY" secondItem="2jD-tx-hv9" secondAttribute="centerY" id="QOE-z0-cBB"/>
+                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="centerY" secondItem="2jD-tx-hv9" secondAttribute="centerY" constant="-5.5" id="QOE-z0-cBB"/>
                                         <constraint firstItem="X8d-Wz-Vbt" firstAttribute="top" secondItem="a1w-NW-gC5" secondAttribute="top" id="Qd5-GE-s7j"/>
+                                        <constraint firstAttribute="bottom" secondItem="FBf-qy-R34" secondAttribute="bottom" id="giE-Hz-MLT"/>
+                                        <constraint firstItem="lg5-Yi-nNM" firstAttribute="top" secondItem="a1w-NW-gC5" secondAttribute="bottom" constant="2" id="hv9-tZ-1aP"/>
+                                        <constraint firstItem="FBf-qy-R34" firstAttribute="top" secondItem="X8d-Wz-Vbt" secondAttribute="bottom" constant="2" id="lYz-Q0-3IA"/>
+                                        <constraint firstItem="lg5-Yi-nNM" firstAttribute="leading" secondItem="a1w-NW-gC5" secondAttribute="leading" id="tV4-J8-NLo"/>
                                         <constraint firstItem="X8d-Wz-Vbt" firstAttribute="top" secondItem="2jD-tx-hv9" secondAttribute="top" id="uK3-eX-TCj"/>
-                                        <constraint firstItem="lS2-iH-17o" firstAttribute="bottom" secondItem="X8d-Wz-Vbt" secondAttribute="bottom" id="ucJ-kb-nN9"/>
+                                        <constraint firstItem="lS2-iH-17o" firstAttribute="bottom" secondItem="X8d-Wz-Vbt" secondAttribute="bottom" constant="11" id="ucJ-kb-nN9"/>
                                         <constraint firstItem="lS2-iH-17o" firstAttribute="top" secondItem="X8d-Wz-Vbt" secondAttribute="top" id="vcQ-PE-RX1"/>
                                         <constraint firstItem="X8d-Wz-Vbt" firstAttribute="bottom" secondItem="a1w-NW-gC5" secondAttribute="bottom" id="wUm-B7-7wh"/>
-                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="leading" secondItem="2jD-tx-hv9" secondAttribute="leadingMargin" id="wtD-Gc-CQL"/>
-                                        <constraint firstItem="a1w-NW-gC5" firstAttribute="trailing" secondItem="2jD-tx-hv9" secondAttribute="trailingMargin" id="zM9-n6-1tp"/>
+                                        <constraint firstItem="X8d-Wz-Vbt" firstAttribute="leading" secondItem="2jD-tx-hv9" secondAttribute="leadingMargin" constant="17" id="wtD-Gc-CQL"/>
+                                        <constraint firstItem="a1w-NW-gC5" firstAttribute="trailing" secondItem="2jD-tx-hv9" secondAttribute="trailingMargin" constant="-17" id="zM9-n6-1tp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="blueBar" destination="FBf-qy-R34" id="pyG-bS-P2a"/>
                                     <outlet property="cellView" destination="2jD-tx-hv9" id="Aaf-kn-c2r"/>
                                     <outlet property="heroBattleImage" destination="X8d-Wz-Vbt" id="AoS-GK-n5X"/>
+                                    <outlet property="redBar" destination="lg5-Yi-nNM" id="vlC-68-14b"/>
                                     <outlet property="roudBattleImage" destination="lS2-iH-17o" id="gxr-js-bUm"/>
                                     <outlet property="villainBattleImage" destination="a1w-NW-gC5" id="qWK-HW-ACc"/>
                                     <segue destination="ivS-O5-m0c" kind="show" identifier="SEGUE_FROM_BATTLES_TO_DETAIL" id="4mX-59-ZLD"/>
@@ -607,9 +625,8 @@
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tzu-et-Nh3">
                                             <rect key="frame" x="20" y="11" width="374" height="312"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -654,6 +671,7 @@
         <image name="ic_tab_heroes" width="16" height="17"/>
         <image name="ic_tab_villain" width="11" height="17"/>
         <image name="img_heroe_america_captain" width="223.33332824707031" height="138"/>
+        <image name="img_villain_dormammu" width="223.33332824707031" height="138"/>
         <image name="img_villain_johann_schmidt" width="223.33332824707031" height="138"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>

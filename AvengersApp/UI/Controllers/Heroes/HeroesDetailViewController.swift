@@ -93,15 +93,14 @@ class HeroesDetailViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("Seccion \(indexPath.section)")
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroesImageCell") as! HeroesImageTableViewCell
-            cell.backgroundColor = .red
+            cell.backgroundColor = UIColor(hexString: "#6893d9")
             cell.heroImage.image = UIImage(named: "\(hero?.image ?? "")")
             return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroesPowerCell") as! HeroesPowerTableViewCell
-            cell.backgroundColor = .black
+            cell.backgroundColor = UIColor(hexString: "#97b1db")
             switch hero?.power {
             case 1:
                 cell.powerStars.image = UIImage(named: "ic_stars_1")
@@ -119,11 +118,11 @@ class HeroesDetailViewController: UITableViewController {
             return cell
         } else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BattleTableCell") as! HeroesBattlesTableViewCell
-            cell.backgroundColor = .white
+            cell.backgroundColor = UIColor(hexString: "#a3bce6")
             return cell
         } else if indexPath.section == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier:"HeroesBioCell") as! HeroesBioTableViewCell
-            cell.backgroundColor = .blue
+            cell.backgroundColor = UIColor(hexString: "#367beb")
             cell.biography.text = hero?.summary
             return cell
         } else {

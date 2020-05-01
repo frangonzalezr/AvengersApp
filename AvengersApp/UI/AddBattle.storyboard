@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Battle View Controller-->
         <scene sceneID="wa6-Y0-QDf">
             <objects>
-                <viewController id="0vV-Ti-O4s" sceneMemberID="viewController">
+                <viewController id="0vV-Ti-O4s" customClass="AddBattleViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j1P-ON-LJW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,12 +41,18 @@
                                 <state key="normal" image="plus.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BTc-AV-VHG" kind="show" identifier="SEGUE_FROM_ADD_BATTLE_TO_HEROES" id="oiC-QA-Mb0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frk-nC-NBu">
                                 <rect key="frame" x="194" y="569.5" width="26.5" height="25.5"/>
                                 <state key="normal" image="plus.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hyh-Jc-fbU" kind="show" identifier="SEGUE_FROM_ADD_BATTLE_TO_VILLAINS" id="zN7-4z-CdH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rae-x5-ux5">
                                 <rect key="frame" x="196" y="673" width="22" height="22"/>
@@ -56,6 +62,9 @@
                                 <state key="normal" image="checkmark" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveBattle:" destination="0vV-Ti-O4s" eventType="touchUpInside" id="BAK-kM-LSF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -76,16 +85,141 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hbr-HE-Azz"/>
                     </view>
+                    <connections>
+                        <outlet property="heroImage" destination="SeB-Ri-eQd" id="hHO-Tj-UTs"/>
+                        <outlet property="villainImage" destination="iov-ka-58T" id="XYf-RO-MlO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1J-5a-dFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102.89855072463769" y="130.58035714285714"/>
+            <point key="canvasLocation" x="-151" y="131"/>
+        </scene>
+        <!--SuperHeroes-->
+        <scene sceneID="cK9-O9-e1W">
+            <objects>
+                <tableViewController id="BTc-AV-VHG" customClass="HeroesPickerTableViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="skK-pk-0ke">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.76901948450000002" green="0.82672792669999995" blue="0.95884889360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="heroesCell" rowHeight="200" id="tmk-BK-vJS" customClass="HeroesTableViewCell" customModule="AvengersApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="heroesCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tmk-BK-vJS" id="PFY-ki-YBE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZ7-Xj-98V">
+                                            <rect key="frame" x="186" y="147" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_heroe_america_captain" translatesAutoresizingMaskIntoConstraints="NO" id="mOz-yS-ky2">
+                                            <rect key="frame" x="103" y="11" width="208" height="128"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_stars_5" translatesAutoresizingMaskIntoConstraints="NO" id="kae-12-8Qu">
+                                            <rect key="frame" x="158.5" y="173" width="97" height="15"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mOz-yS-ky2" secondAttribute="bottom" constant="50" id="FVS-rP-75w"/>
+                                        <constraint firstItem="mOz-yS-ky2" firstAttribute="leading" secondItem="PFY-ki-YBE" secondAttribute="leadingMargin" constant="83" id="I1L-13-bks"/>
+                                        <constraint firstItem="kae-12-8Qu" firstAttribute="top" secondItem="rZ7-Xj-98V" secondAttribute="bottom" constant="5" id="M9K-1C-GtC"/>
+                                        <constraint firstItem="mOz-yS-ky2" firstAttribute="top" secondItem="PFY-ki-YBE" secondAttribute="topMargin" id="S8f-JD-6PN"/>
+                                        <constraint firstItem="kae-12-8Qu" firstAttribute="centerX" secondItem="PFY-ki-YBE" secondAttribute="centerX" id="j9n-rH-Uft"/>
+                                        <constraint firstItem="mOz-yS-ky2" firstAttribute="centerX" secondItem="PFY-ki-YBE" secondAttribute="centerX" id="jf8-kV-Vd7"/>
+                                        <constraint firstItem="rZ7-Xj-98V" firstAttribute="top" secondItem="mOz-yS-ky2" secondAttribute="bottom" constant="8" id="nHe-bH-BC1"/>
+                                        <constraint firstItem="rZ7-Xj-98V" firstAttribute="centerX" secondItem="PFY-ki-YBE" secondAttribute="centerX" id="xTh-bf-VVg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellView" destination="PFY-ki-YBE" id="iQM-RT-f3w"/>
+                                    <outlet property="heroImage" destination="mOz-yS-ky2" id="eMK-u4-9vG"/>
+                                    <outlet property="nameLabel" destination="rZ7-Xj-98V" id="AN8-Hw-bhR"/>
+                                    <outlet property="powerStars" destination="kae-12-8Qu" id="dIC-Oy-fVV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BTc-AV-VHG" id="dM7-Ao-TSx"/>
+                            <outlet property="delegate" destination="BTc-AV-VHG" id="wBM-GM-BxH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SuperHeroes" id="Zqs-2P-5Jr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trW-iA-AUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="-388"/>
+        </scene>
+        <!--Villanos-->
+        <scene sceneID="DMv-Ib-MHy">
+            <objects>
+                <tableViewController id="hyh-Jc-fbU" customClass="VillainsPickerTableViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nai-zf-HFD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="villainsCell" rowHeight="200" id="ACQ-kw-UDc" customClass="VillainsTableViewCell" customModule="AvengersApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ACQ-kw-UDc" id="ywQ-xe-6MG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_villain_johann_schmidt" translatesAutoresizingMaskIntoConstraints="NO" id="mba-d5-wfc">
+                                            <rect key="frame" x="103" y="11" width="208" height="128"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgQ-Uw-tBU">
+                                            <rect key="frame" x="186" y="147" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_stars_5" translatesAutoresizingMaskIntoConstraints="NO" id="OS1-Dh-mWv">
+                                            <rect key="frame" x="158.5" y="176" width="97" height="15"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mba-d5-wfc" firstAttribute="leading" secondItem="ywQ-xe-6MG" secondAttribute="leadingMargin" constant="83" id="2QU-46-88n"/>
+                                        <constraint firstItem="mgQ-Uw-tBU" firstAttribute="top" secondItem="mba-d5-wfc" secondAttribute="bottom" constant="8" id="Cuk-nj-Vdn"/>
+                                        <constraint firstItem="mgQ-Uw-tBU" firstAttribute="centerX" secondItem="ywQ-xe-6MG" secondAttribute="centerX" id="F0t-ju-jST"/>
+                                        <constraint firstItem="mba-d5-wfc" firstAttribute="centerX" secondItem="ywQ-xe-6MG" secondAttribute="centerX" id="P8d-9t-Avo"/>
+                                        <constraint firstItem="OS1-Dh-mWv" firstAttribute="top" secondItem="mgQ-Uw-tBU" secondAttribute="bottom" constant="8" id="QGn-BO-bgF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mba-d5-wfc" secondAttribute="bottom" constant="50" id="bkw-Vu-4gq"/>
+                                        <constraint firstItem="mba-d5-wfc" firstAttribute="top" secondItem="ywQ-xe-6MG" secondAttribute="topMargin" id="nWP-re-adI"/>
+                                        <constraint firstItem="OS1-Dh-mWv" firstAttribute="centerX" secondItem="ywQ-xe-6MG" secondAttribute="centerX" id="yZC-fS-9bg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellView" destination="ywQ-xe-6MG" id="dkD-s7-0fA"/>
+                                    <outlet property="nameLabel" destination="mgQ-Uw-tBU" id="tHd-Kr-iZc"/>
+                                    <outlet property="powerStars" destination="OS1-Dh-mWv" id="7JA-wQ-FFL"/>
+                                    <outlet property="villainImage" destination="mba-d5-wfc" id="ffs-W0-KnG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hyh-Jc-fbU" id="vy8-E6-qne"/>
+                            <outlet property="delegate" destination="hyh-Jc-fbU" id="7y8-u5-Ymp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Villanos" id="n97-qP-K9A"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PT7-zH-PKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="330"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="ic_battle_round" width="512" height="512"/>
+        <image name="ic_stars_5" width="97" height="15"/>
         <image name="img_heroe_america_captain" width="223.33332824707031" height="138"/>
+        <image name="img_villain_johann_schmidt" width="223.33332824707031" height="138"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

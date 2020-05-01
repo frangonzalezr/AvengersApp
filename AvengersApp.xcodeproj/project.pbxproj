@@ -32,6 +32,10 @@
 		A1792EDB245767BF0090C396 /* EditPower.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1792EDA245767BF0090C396 /* EditPower.storyboard */; };
 		A1792EDD24576B270090C396 /* AddBattle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1792EDC24576B270090C396 /* AddBattle.storyboard */; };
 		A1857380245C55C00005762A /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185737F245C55C00005762A /* FloatRatingView.swift */; };
+		A1857382245CBA9D0005762A /* battles.json in Resources */ = {isa = PBXBuildFile; fileRef = A1857381245CBA9D0005762A /* battles.json */; };
+		A1857384245CC60A0005762A /* HeroesPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1857383245CC60A0005762A /* HeroesPickerTableViewController.swift */; };
+		A1857386245CC7ED0005762A /* AddBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1857385245CC7ED0005762A /* AddBattleViewController.swift */; };
+		A1857388245CD4680005762A /* VillainsPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1857387245CD4680005762A /* VillainsPickerTableViewController.swift */; };
 		A193E1CD244DFE04002B907E /* HeroesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */; };
 		A193E1CF244E037A002B907E /* BattlesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */; };
 		A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */; };
@@ -87,6 +91,10 @@
 		A1792EDA245767BF0090C396 /* EditPower.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditPower.storyboard; sourceTree = "<group>"; };
 		A1792EDC24576B270090C396 /* AddBattle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBattle.storyboard; sourceTree = "<group>"; };
 		A185737F245C55C00005762A /* FloatRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
+		A1857381245CBA9D0005762A /* battles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battles.json; sourceTree = "<group>"; };
+		A1857383245CC60A0005762A /* HeroesPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesPickerTableViewController.swift; sourceTree = "<group>"; };
+		A1857385245CC7ED0005762A /* AddBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBattleViewController.swift; sourceTree = "<group>"; };
+		A1857387245CD4680005762A /* VillainsPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsPickerTableViewController.swift; sourceTree = "<group>"; };
 		A193E1CC244DFE04002B907E /* HeroesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDetailViewController.swift; sourceTree = "<group>"; };
 		A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesDetailViewController.swift; sourceTree = "<group>"; };
 		A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsDetailViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 				A1BFD2D62455E9BF00AEA577 /* HeroesImageTableViewCell.swift */,
 				A1BFD2D82455E9F500AEA577 /* HeroesPowerTableViewCell.swift */,
 				A1BFD2DA2455EA2B00AEA577 /* HeroesBioTableViewCell.swift */,
+				A1857383245CC60A0005762A /* HeroesPickerTableViewController.swift */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				A1F04B9E244C7995009CB614 /* BattlesTableViewController.swift */,
 				A193E1CE244E037A002B907E /* BattlesDetailViewController.swift */,
 				A14335AF24535F1E00012C8D /* BattlesTableViewCell.swift */,
+				A1857385245CC7ED0005762A /* AddBattleViewController.swift */,
 			);
 			path = Battles;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 				A193E1D0244E03A3002B907E /* VillainsDetailViewController.swift */,
 				A14335B124535F3100012C8D /* VillainsTableViewCell.swift */,
 				A1BFD2DC2455FEBB00AEA577 /* BattleCell.swift */,
+				A1857387245CD4680005762A /* VillainsPickerTableViewController.swift */,
 			);
 			path = Villains;
 			sourceTree = "<group>";
@@ -239,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				A1FCB912245887D0007C6A7F /* heroes.json */,
+				A1857381245CBA9D0005762A /* battles.json */,
 				A1FCB91524589A4D007C6A7F /* villains.json */,
 				A1792EB9245742D20090C396 /* heroe_america_captain.json */,
 				A1792EBB245742D20090C396 /* heroe_black_panther.json */,
@@ -377,6 +389,7 @@
 				A1F04BA2244C7995009CB614 /* Main.storyboard in Resources */,
 				A1792EDB245767BF0090C396 /* EditPower.storyboard in Resources */,
 				A1792EC5245742D20090C396 /* heroe_dr_strange.json in Resources */,
+				A1857382245CBA9D0005762A /* battles.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,10 +406,12 @@
 				A1BFD2DD2455FEBB00AEA577 /* BattleCell.swift in Sources */,
 				A1BFD2D72455E9BF00AEA577 /* HeroesImageTableViewCell.swift in Sources */,
 				A193E1D1244E03A3002B907E /* VillainsDetailViewController.swift in Sources */,
+				A1857388245CD4680005762A /* VillainsPickerTableViewController.swift in Sources */,
 				A1857380245C55C00005762A /* FloatRatingView.swift in Sources */,
 				A1F04B9D244C7995009CB614 /* HeroesTableViewController.swift in Sources */,
 				A14335B224535F3100012C8D /* VillainsTableViewCell.swift in Sources */,
 				A1F04B99244C7995009CB614 /* AppDelegate.swift in Sources */,
+				A1857386245CC7ED0005762A /* AddBattleViewController.swift in Sources */,
 				A1E28E772455AAB5006D6F74 /* HeroesBattlesTableViewCell.swift in Sources */,
 				A193E1CF244E037A002B907E /* BattlesDetailViewController.swift in Sources */,
 				A1EE34DA245C3BDE002B9D38 /* EditPowerViewController.swift in Sources */,
@@ -409,6 +424,7 @@
 				A1F04BB2244C7C8E009CB614 /* VillainsTableViewController.swift in Sources */,
 				A193E1CD244DFE04002B907E /* HeroesDetailViewController.swift in Sources */,
 				A1BFD2D92455E9F500AEA577 /* HeroesPowerTableViewCell.swift in Sources */,
+				A1857384245CC60A0005762A /* HeroesPickerTableViewController.swift in Sources */,
 				A1F04BA5244C7995009CB614 /* AvengersApp.xcdatamodeld in Sources */,
 				A14335AE24535F0E00012C8D /* HeroesTableViewCell.swift in Sources */,
 			);

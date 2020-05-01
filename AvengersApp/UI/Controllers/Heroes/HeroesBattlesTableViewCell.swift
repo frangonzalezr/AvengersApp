@@ -20,6 +20,7 @@ class HeroesBattlesTableViewCell: UITableViewCell, UICollectionViewDataSource, U
         collectionView?.delegate = self
         collectionView?.dataSource = self
         collectionView?.reloadData()
+        collectionView?.backgroundColor = UIColor(hexString: "#a3bce6")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
