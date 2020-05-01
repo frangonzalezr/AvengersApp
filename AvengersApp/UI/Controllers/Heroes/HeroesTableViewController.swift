@@ -44,6 +44,10 @@ class HeroesTableViewController: UITableViewController {
         
      }
     
+    override func viewWillAppear(_ animated: Bool) {
+        showData()
+    }
+    
     private func showData() {
         tableView.reloadData()
     }

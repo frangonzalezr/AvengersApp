@@ -28,6 +28,9 @@ class VillainsTableViewController: UITableViewController {
     
     private var villains: [Villains] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        showData()
+    }
     private func loadAllContent() {
         villains = datamanager.loadAllVillains()
         if villains.isEmpty {

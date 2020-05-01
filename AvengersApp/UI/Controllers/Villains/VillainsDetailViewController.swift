@@ -9,6 +9,7 @@
 import UIKit
 
 class VillainsDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+        
     let model = generateRandomData()
     var barTitle: String?
     var villain: Villains?
@@ -26,7 +27,16 @@ class VillainsDetailViewController: UIViewController, UICollectionViewDataSource
         self.title = barTitle
         villainImage.image = UIImage(named: "\(villain?.image ?? "")")
         biography.text = villain?.summary
-        switch villain?.power {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateStars()
+    }
+    func updateStars() {
+        switch villain!.power {
         case 1:
             powerStars.image = UIImage(named: "ic_stars_1")
         case 2:
@@ -40,19 +50,24 @@ class VillainsDetailViewController: UIViewController, UICollectionViewDataSource
         default:
             powerStars.image = UIImage(named: "ic_stars_0")
         }
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.reloadData()
     }
+    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-         if (segue.identifier == "SEGUE_FROM_VILLAIN_POWER_TO_EDITPOWER") {
-                guard let destinationVC = segue.destination as? EditPowerViewController else { return }
-                destinationVC.power = Double(villain!.power)
+     if (segue.identifier == "SEGUE_FROM_VILLAIN_POWER_TO_EDITPOWER") {
+            guard let destinationVC = segue.destination as? EditPowerViewController else { return }
+            destinationVC.power = Double(villain!.power)
+            destinationVC.villain = self.villain
+            destinationVC.onCompletion = { success in
+                self.updateStars()
+            }
         }
-        
     }
+    
+    // MARK: - Edit Power delegate
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BattleCell

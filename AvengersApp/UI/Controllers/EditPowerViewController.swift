@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class EditPowerViewController: UIViewController {
-    
+    var onCompletion: ((_ success: Bool) -> ())?
     @IBOutlet weak var floatRatingView: FloatRatingView!
-    
     var power: Double?
+    var hero: Heroes?
+    var villain: Villains?
+    let datamanager = DataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +27,21 @@ class EditPowerViewController: UIViewController {
         floatRatingView.rating = power ?? 2.5
         
     }
-
     
     @IBAction func cancelEditPower(_ sender: UIButton) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveEditPower(_ sender: UIButton) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        if villain == nil {
+            self.hero?.power = Int16(self.power ?? 2.5)
+            datamanager.saveHero(self.hero!)
+        } else {
+            self.villain?.power = Int16(self.power ?? 2.5)
+            datamanager.saveVillain(self.villain!)
+        }
+        onCompletion?(true)
+        dismiss(animated: true, completion: nil)
     }
 }
 extension EditPowerViewController: FloatRatingViewDelegate {

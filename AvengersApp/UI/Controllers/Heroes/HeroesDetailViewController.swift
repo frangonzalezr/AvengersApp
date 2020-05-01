@@ -68,6 +68,10 @@ class HeroesDetailViewController: UITableViewController {
          if (segue.identifier == "SEGUE_FROM_HERO_POWER_TO_EDITPOWER") {
                 guard let destinationVC = segue.destination as? EditPowerViewController else { return }
                 destinationVC.power = Double(hero!.power)
+                destinationVC.hero = self.hero
+                destinationVC.onCompletion = { success in
+                    self.tableView.reloadData()
+                }
         }
         
     }

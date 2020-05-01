@@ -50,7 +50,15 @@ class Database {
                     insertInto: context())
     }
     
-    func persist(_ heroes: Heroes) {
+    func persistHeroes(_ heroes: Heroes) {
+        guard let contextAvengers = context() else {
+            return
+        }
+        
+        try? contextAvengers.save()
+    }
+    
+    func persistVillains(_ villains: Villains) {
         guard let contextAvengers = context() else {
             return
         }

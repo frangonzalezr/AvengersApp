@@ -32,8 +32,12 @@ class DataManager {
     }
     
     func saveHero(_ heroes: Heroes) {
-        database?.persist(heroes)
+        database?.persistHeroes(heroes)
     }
+    
+    func saveVillain(_ villains: Villains) {
+         database?.persistVillains(villains)
+     }
     
     func loadAllHeroes() -> [Heroes] {
         guard let data = database?.fecthAllDataHeroes() as? [Heroes] else {
