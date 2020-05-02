@@ -149,7 +149,7 @@
                     <navigationItem key="navigationItem" title="Batallas" id="XFT-JT-ZHG">
                         <barButtonItem key="rightBarButtonItem" image="plus.circle" catalog="system" style="plain" id="5hA-gX-K7d">
                             <connections>
-                                <segue destination="FK7-Vd-8MO" kind="showDetail" id="olc-t8-yFE"/>
+                                <segue destination="FK7-Vd-8MO" kind="showDetail" identifier="SEGUE_FROM_BATTLES_TO_ADD_BATTLE" id="olc-t8-yFE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -322,6 +322,7 @@
                                         <connections>
                                             <outlet property="battleNameLabel" destination="tZa-1G-See" id="6pq-Fl-FFv"/>
                                             <outlet property="cellview" destination="xij-2O-HVT" id="HXO-Hk-rDx"/>
+                                            <segue destination="ivS-O5-m0c" kind="show" id="ELb-jR-lsu"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -600,6 +601,7 @@
                                                     <connections>
                                                         <outlet property="battleNameLabel" destination="KTz-id-g1b" id="TZX-VB-Ylf"/>
                                                         <outlet property="cellview" destination="O75-IF-zMw" id="vGv-pd-6Rx"/>
+                                                        <segue destination="ivS-O5-m0c" kind="show" id="pNA-hy-TaG"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -664,6 +666,9 @@
             <point key="canvasLocation" x="2304" y="-477"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ELb-jR-lsu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="ic_battle_round" width="512" height="512"/>
         <image name="ic_stars_5" width="97" height="15"/>

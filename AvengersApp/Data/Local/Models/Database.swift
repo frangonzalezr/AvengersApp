@@ -50,6 +50,17 @@ class Database {
                     insertInto: context())
     }
     
+    func createDataBattles() -> NSManagedObject? {
+        guard let contextAvengers = context(),
+              let entity = NSEntityDescription.entity(forEntityName: entityBattles,
+                                                      in: contextAvengers) else {
+            return nil
+        }
+        
+        return Battles(entity: entity,
+                    insertInto: context())
+    }
+    
     func persistHeroes(_ heroes: Heroes) {
         guard let contextAvengers = context() else {
             return
@@ -66,11 +77,23 @@ class Database {
         try? contextAvengers.save()
     }
     
+    func persistBattles(_ battles: Battles) {
+        guard let contextAvengers = context() else {
+            return
+        }
+        
+        try? contextAvengers.save()
+    }
+    
     func fecthAllDataHeroes() -> [NSManagedObject]? {
         return try? context()?.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: entityHeroes)) as? [NSManagedObject]
     }
     
     func fecthAllDataVillains() -> [NSManagedObject]? {
         return try? context()?.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: entityVillains)) as? [NSManagedObject]
+    }
+    
+    func fecthAllDataBattles() -> [NSManagedObject]? {
+        return try? context()?.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: entityBattles)) as? [NSManagedObject]
     }
 }

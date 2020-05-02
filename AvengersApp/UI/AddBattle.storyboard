@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frk-nC-NBu">
-                                <rect key="frame" x="194" y="569.5" width="26.5" height="25.5"/>
+                                <rect key="frame" x="193.5" y="569" width="27" height="26"/>
                                 <state key="normal" image="plus.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
@@ -87,6 +87,9 @@
                     </view>
                     <connections>
                         <outlet property="heroImage" destination="SeB-Ri-eQd" id="hHO-Tj-UTs"/>
+                        <outlet property="plusButtonHero" destination="ntT-Vt-rDx" id="RrT-yi-JgE"/>
+                        <outlet property="plusButtonVillain" destination="Frk-nC-NBu" id="3YQ-LC-O75"/>
+                        <outlet property="saveButton" destination="rae-x5-ux5" id="jAF-be-6dd"/>
                         <outlet property="villainImage" destination="iov-ka-58T" id="XYf-RO-MlO"/>
                     </connections>
                 </viewController>

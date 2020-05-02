@@ -31,12 +31,20 @@ class DataManager {
         return database?.createDataVillains() as? Villains
     }
     
+    func createBattle() -> Battles? {
+        return database?.createDataBattles() as? Battles
+    }
+    
     func saveHero(_ heroes: Heroes) {
         database?.persistHeroes(heroes)
     }
     
     func saveVillain(_ villains: Villains) {
          database?.persistVillains(villains)
+     }
+    
+    func saveBattle(_ battles: Battles) {
+         database?.persistBattles(battles)
      }
     
     func loadAllHeroes() -> [Heroes] {
@@ -54,6 +62,15 @@ class DataManager {
         
         return data
     }
+    
+    func loadAllBattles() -> [Battles] {
+        guard let data = database?.fecthAllDataBattles() as? [Battles] else {
+            return []
+        }
+        
+        return data
+    }
+    
     func loadInitialData() {
         if let pathURLHeroes = Bundle.main.url(forResource: "heroes", withExtension: "json") {
             do {

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Battles" representedClassName="Battles" syncable="YES" codeGenerationType="class">
-        <attribute name="battle" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="hero" optional="YES" attributeType="String"/>
-        <attribute name="villain" optional="YES" attributeType="String"/>
-        <attribute name="winner" optional="YES" attributeType="String"/>
-        <relationship name="battleHero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Heroes" inverseName="battle" inverseEntity="Heroes"/>
-        <relationship name="battleVillain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Villains" inverseName="battle" inverseEntity="Villains"/>
+        <attribute name="hero" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="villain" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="winner" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Heroes" representedClassName="Heroes" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -15,7 +11,6 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
-        <relationship name="battle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Battles" inverseName="battleHero" inverseEntity="Battles"/>
     </entity>
     <entity name="Villains" representedClassName="Villains" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -23,11 +18,10 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
-        <relationship name="battle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Battles" inverseName="battleVillain" inverseEntity="Battles"/>
     </entity>
     <elements>
-        <element name="Battles" positionX="-195.54296875" positionY="119.4609375" width="128" height="148"/>
-        <element name="Heroes" positionX="47.24609375" positionY="119.56640625" width="128" height="133"/>
-        <element name="Villains" positionX="-429.5703125" positionY="134.546875" width="128" height="133"/>
+        <element name="Battles" positionX="-195.54296875" positionY="119.4609375" width="128" height="88"/>
+        <element name="Heroes" positionX="47.24609375" positionY="119.56640625" width="128" height="118"/>
+        <element name="Villains" positionX="-429.5703125" positionY="134.546875" width="128" height="118"/>
     </elements>
 </model>
