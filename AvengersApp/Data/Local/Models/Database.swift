@@ -85,6 +85,14 @@ class Database {
         try? contextAvengers.save()
     }
     
+    func persistAll() {
+        guard let contextAvengers = context() else {
+            return
+        }
+        
+        try? contextAvengers.save()
+    }
+    
     func fecthAllDataHeroes() -> [NSManagedObject]? {
         return try? context()?.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: entityHeroes)) as? [NSManagedObject]
     }
@@ -95,5 +103,11 @@ class Database {
     
     func fecthAllDataBattles() -> [NSManagedObject]? {
         return try? context()?.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: entityBattles)) as? [NSManagedObject]
+    }
+    
+    func delete(data: [NSManagedObject]) {
+        let contextBattle = context()
+        data.forEach{ contextBattle?.delete($0) }
+        try? contextBattle?.save()
     }
 }

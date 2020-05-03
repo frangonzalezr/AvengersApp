@@ -47,6 +47,10 @@ class DataManager {
          database?.persistBattles(battles)
      }
     
+    func saveAll() {
+         database?.persistAll()
+     }
+    
     func loadAllHeroes() -> [Heroes] {
         guard let data = database?.fecthAllDataHeroes() as? [Heroes] else {
             return []
@@ -69,6 +73,10 @@ class DataManager {
         }
         
         return data
+    }
+    
+    func deleteBattle(_ battle: Battles) {
+        database?.delete(data: [battle])
     }
     
     func loadInitialData() {
