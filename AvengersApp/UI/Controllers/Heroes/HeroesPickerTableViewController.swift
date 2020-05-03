@@ -58,7 +58,6 @@ class HeroesPickerTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("SELECCIONAMOS \(indexPath.row)")
         onCompletion?(true, heroes[indexPath.row])
         dismiss(animated: true, completion: nil)
     }

@@ -56,12 +56,14 @@ class AddBattleViewController: UIViewController {
     func isTheHeroWinner(hero: Heroes, villain: Villains) -> Bool {
         if self.hero.power > self.villain.power {
             return true
-        } else {
+        } else if self.hero.power == self.villain.power {
             if self.hero.name?.count ?? 0 > self.villain.name?.count ?? 0 {
                 return true
             } else {
-            return false
+                return false
             }
+        } else {
+            return false
         }
     }
 

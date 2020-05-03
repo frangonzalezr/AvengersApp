@@ -13,12 +13,12 @@ class BattlesTableViewCell: UITableViewCell{
     @IBOutlet weak var heroBattleImage: UIImageView!
     @IBOutlet weak var villainBattleImage: UIImageView!
     @IBOutlet weak var roudBattleImage: UIImageView!
-    @IBOutlet weak var blueBar: UIView!
-    @IBOutlet weak var redBar: UIView!
+    @IBOutlet weak var heroBar: UIView!
+    @IBOutlet weak var villainBar: UIView!
     
     override func awakeFromNib() {
-        blueBar.layer.cornerRadius = 5.0
-        redBar.layer.cornerRadius = 5.0
+        heroBar.layer.cornerRadius = 5.0
+        villainBar.layer.cornerRadius = 5.0
         
     }
     

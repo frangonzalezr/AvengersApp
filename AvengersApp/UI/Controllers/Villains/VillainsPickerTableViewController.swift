@@ -56,7 +56,6 @@ class VillainsPickerTableViewController: UITableViewController {
       }
 
       override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          print("SELECCIONAMOS \(indexPath.row)")
           onCompletion?(true, villains[indexPath.row])
           dismiss(animated: true, completion: nil)
       }

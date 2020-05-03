@@ -131,11 +131,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="blueBar" destination="FBf-qy-R34" id="pyG-bS-P2a"/>
                                     <outlet property="cellView" destination="2jD-tx-hv9" id="Aaf-kn-c2r"/>
+                                    <outlet property="heroBar" destination="FBf-qy-R34" id="pyG-bS-P2a"/>
                                     <outlet property="heroBattleImage" destination="X8d-Wz-Vbt" id="AoS-GK-n5X"/>
-                                    <outlet property="redBar" destination="lg5-Yi-nNM" id="vlC-68-14b"/>
                                     <outlet property="roudBattleImage" destination="lS2-iH-17o" id="gxr-js-bUm"/>
+                                    <outlet property="villainBar" destination="lg5-Yi-nNM" id="vlC-68-14b"/>
                                     <outlet property="villainBattleImage" destination="a1w-NW-gC5" id="qWK-HW-ACc"/>
                                     <segue destination="ivS-O5-m0c" kind="show" identifier="SEGUE_FROM_BATTLES_TO_DETAIL" id="4mX-59-ZLD"/>
                                 </connections>
@@ -328,13 +328,13 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ9-gL-oGN">
-                                <rect key="frame" x="20" y="458" width="68" height="21"/>
+                                <rect key="frame" x="20" y="458" width="68" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jof-YS-Yat">
-                                <rect key="frame" x="20" y="487" width="374" height="326"/>
+                                <rect key="frame" x="20" y="486.33333333333326" width="374" height="326.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -667,7 +667,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ELb-jR-lsu"/>
+        <segue reference="pNA-hy-TaG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ic_battle_round" width="512" height="512"/>

@@ -16,9 +16,6 @@ class HeroesDetailViewController: UITableViewController {
     var hero: Heroes?
     
     
-    let battlesData = ["Batalla 1", "Batalla 2", "Batalla 3", "Batalla 4", "Batalla 5"]
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = barTitle
@@ -119,6 +116,7 @@ class HeroesDetailViewController: UITableViewController {
         } else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BattleTableCell") as! HeroesBattlesTableViewCell
             cell.backgroundColor = UIColor(hexString: "#a3bce6")
+            cell.heroId = hero?.id ?? 0
             return cell
         } else if indexPath.section == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier:"HeroesBioCell") as! HeroesBioTableViewCell

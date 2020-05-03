@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  BattlesTableViewController.swift
 //  AvengersApp
 //
 //  Created by Fran González on 19/04/2020.
@@ -108,6 +108,21 @@ class BattlesTableViewController: UITableViewController {
                 let battleHero = battles[indexPath.section].hero
                 let battleVillain = battles[indexPath.section].villain
                 let battleWinner = battles[indexPath.section].winner
+                let allHeroes = datamanager.loadAllHeroes()
+                let allVillains = datamanager.loadAllVillains()
+                if battleWinner == battleHero {
+                    cell.heroBar.backgroundColor = .blue
+                    cell.villainBar.backgroundColor = .red
+                } else {
+                    cell.heroBar.backgroundColor = .red
+                    cell.villainBar.backgroundColor = .blue
+                }
+                
+                let cellHero = allHeroes.filter({ $0.id == battleHero })
+                cell.heroBattleImage.image = UIImage(named: "\(cellHero[0].image ?? "")")
+                
+                let cellVillain = allVillains.filter({ $0.id == battleVillain })
+                cell.villainBattleImage.image = UIImage(named: "\(cellVillain[0].image ?? "")")
                 
                 
                 
