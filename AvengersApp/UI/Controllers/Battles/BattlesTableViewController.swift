@@ -48,11 +48,8 @@ class BattlesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     func configureTableView() {
-        // Configure tableView delegate and data source
         tableView.delegate = self
         tableView.dataSource = self
-        
-        // Set footer view for remove empty table view separator lines
         tableView.tableFooterView = UIView()
     }
     
@@ -65,7 +62,6 @@ class BattlesTableViewController: UITableViewController {
     }
     
           override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-              // #warning Incomplete implementation, return the number of rows
               return 1
           }
     

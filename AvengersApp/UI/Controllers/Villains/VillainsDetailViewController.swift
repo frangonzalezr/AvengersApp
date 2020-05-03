@@ -42,9 +42,12 @@ class VillainsDetailViewController: UIViewController, UICollectionViewDataSource
     private func updateVillainBattles(){
         allBattles = datamanager.loadAllBattles()
         villainBattles = allBattles.filter({ $0.villain == self.villain?.id })
+        if villainBattles.isEmpty { hasBattlesLabel.isHidden = false } else { hasBattlesLabel.isHidden = true }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        updateVillainBattles()
+        collectionView.reloadData()
         updateStars()
     }
     

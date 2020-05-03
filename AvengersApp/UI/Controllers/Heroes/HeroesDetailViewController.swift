@@ -25,6 +25,10 @@ class HeroesDetailViewController: UITableViewController {
         showData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        showData()
+    }
+    
     private func heroHasBattles() -> Bool {
     allBattles = datamanager.loadAllBattles()
         heroBattles = allBattles.filter({ $0.hero == self.hero?.id })
@@ -32,6 +36,8 @@ class HeroesDetailViewController: UITableViewController {
     }
     
     private func showData() {
+        let tableCell = tableView.cellForRow(at: [2,0]) as! HeroesBattlesTableViewCell
+        tableCell.collectionView?.reloadData()
         tableView.reloadData()
     }
     

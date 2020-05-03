@@ -4,7 +4,7 @@
         <attribute name="hero" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="villain" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="winner" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="battleHero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Heroes" inverseName="battle" inverseEntity="Heroes"/>
+        <relationship name="battleHero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Heroes" inverseName="batltle" inverseEntity="Heroes"/>
         <relationship name="battleVillain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Villains" inverseName="battle" inverseEntity="Villains"/>
     </entity>
     <entity name="Heroes" representedClassName="Heroes" syncable="YES" codeGenerationType="class">
@@ -13,7 +13,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
-        <relationship name="battle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Battles" inverseName="battleHero" inverseEntity="Battles"/>
+        <relationship name="batltle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Battles" inverseName="battleHero" inverseEntity="Battles"/>
     </entity>
     <entity name="Villains" representedClassName="Villains" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>

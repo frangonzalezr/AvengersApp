@@ -175,28 +175,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5T-x8-wBb">
-                                <rect key="frame" x="138.66666666666666" y="406" width="136.99999999999997" height="30"/>
-                                <state key="normal" title="Eliminar esta batalla"/>
+                                <rect key="frame" x="133" y="406" width="148" height="30"/>
+                                <state key="normal" title="Deshacer esta batalla"/>
                                 <connections>
                                     <action selector="deleteBattle:" destination="ivS-O5-m0c" eventType="touchUpInside" id="x0h-85-AXA"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_heroe_america_captain" translatesAutoresizingMaskIntoConstraints="NO" id="hwf-gD-O6V">
+                                <rect key="frame" x="95.666666666666686" y="476" width="223" height="138"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_heroe_america_captain" translatesAutoresizingMaskIntoConstraints="NO" id="nSf-VK-GXO">
+                                <rect key="frame" x="95.666666666666686" y="228" width="223" height="138"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUA-fQ-Jcr">
+                                <rect key="frame" x="367" y="8" width="39" height="41"/>
+                                <state key="normal" image="arrow.down" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="ivS-O5-m0c" eventType="touchUpInside" id="8RF-FQ-FQy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Q5T-x8-wBb" firstAttribute="centerX" secondItem="XQv-hv-0jE" secondAttribute="centerX" id="5Kl-sx-oVh"/>
+                            <constraint firstItem="nUA-fQ-Jcr" firstAttribute="top" secondItem="4Xp-HD-gWx" secondAttribute="top" constant="8" id="ASa-ld-GiC"/>
                             <constraint firstItem="Q5T-x8-wBb" firstAttribute="centerY" secondItem="XQv-hv-0jE" secondAttribute="centerY" id="Ara-M2-HH4"/>
+                            <constraint firstItem="hwf-gD-O6V" firstAttribute="top" secondItem="Q5T-x8-wBb" secondAttribute="bottom" constant="40" id="BIZ-QV-XTC"/>
+                            <constraint firstItem="4Xp-HD-gWx" firstAttribute="trailing" secondItem="nUA-fQ-Jcr" secondAttribute="trailing" constant="8" id="H5N-Em-eoe"/>
+                            <constraint firstItem="nSf-VK-GXO" firstAttribute="centerX" secondItem="XQv-hv-0jE" secondAttribute="centerX" id="d1u-gk-ed1"/>
+                            <constraint firstItem="hwf-gD-O6V" firstAttribute="centerX" secondItem="XQv-hv-0jE" secondAttribute="centerX" id="ecI-mx-OEa"/>
+                            <constraint firstItem="Q5T-x8-wBb" firstAttribute="top" secondItem="nSf-VK-GXO" secondAttribute="bottom" constant="40" id="lR4-Jq-wwE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Xp-HD-gWx"/>
                     </view>
                     <navigationItem key="navigationItem" id="boi-Pd-9Xs"/>
                     <connections>
+                        <outlet property="battleHeroImage" destination="nSf-VK-GXO" id="tvI-Js-xth"/>
+                        <outlet property="battleVillainImage" destination="hwf-gD-O6V" id="cm3-M2-3mw"/>
                         <outlet property="deleteBattleButton" destination="Q5T-x8-wBb" id="C8n-jf-PTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ee6-xh-0Is" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="986"/>
+            <point key="canvasLocation" x="2608.6956521739135" y="985.71428571428567"/>
         </scene>
         <!--Villanos-->
         <scene sceneID="fSa-43-vvn">
@@ -694,9 +717,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pNA-hy-TaG"/>
+        <segue reference="4mX-59-ZLD"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
         <image name="ic_battle_round" width="512" height="512"/>
         <image name="ic_stars_5" width="97" height="15"/>
         <image name="ic_tab_battles" width="17" height="17"/>
