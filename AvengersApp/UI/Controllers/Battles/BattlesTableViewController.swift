@@ -23,7 +23,6 @@ class BattlesTableViewController: UITableViewController {
 
 
         }
-
     
     // MARK: Private methods
     
@@ -39,7 +38,7 @@ class BattlesTableViewController: UITableViewController {
      }
     
     override func viewWillAppear(_ animated: Bool) {
-        showData()
+        refreshContent()
     }
     
     private func showData() {
@@ -85,19 +84,20 @@ class BattlesTableViewController: UITableViewController {
           override func prepare(for segue: UIStoryboardSegue, sender: Any?)
           {
                if segue.identifier == "SEGUE_FROM_BATTLES_TO_DETAIL" {
-                  if let indexPath = self.tableView.indexPathForSelectedRow {
                       guard let destinationVC = segue.destination as? BattlesDetailViewController else { return }
-                      destinationVC.barTitle = "\(indexPath)"
-
-                  }
-
+                    let cell = sender as! BattlesTableViewCell
+                    guard let indexPaths = self.tableView.indexPath(for: cell) else { return }
+                        destinationVC.battles = battles
+                        destinationVC.battlePos = indexPaths.section
+                        destinationVC.onCompletion = { success in
+                          self.refreshContent()
+                      }
                } else if segue.identifier == "SEGUE_FROM_BATTLES_TO_ADD_BATTLE" {
                 guard let destinationVC = segue.destination as? AddBattleViewController else { return }
                 destinationVC.onCompletion = { success in
                     self.refreshContent()
                 }
             }
-              
           }
           
             

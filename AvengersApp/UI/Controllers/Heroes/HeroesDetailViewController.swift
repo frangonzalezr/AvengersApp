@@ -14,13 +14,21 @@ class HeroesDetailViewController: UITableViewController {
 
     var barTitle: String?
     var hero: Heroes?
-    
+    let datamanager = DataManager()
+    private var allBattles: [Battles] = []
+    private var heroBattles: [Battles] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = barTitle
         configureTableView()
         showData()
+    }
+    
+    private func heroHasBattles() -> Bool {
+    allBattles = datamanager.loadAllBattles()
+        heroBattles = allBattles.filter({ $0.hero == self.hero?.id })
+        if heroBattles.isEmpty { return false } else { return true }
     }
     
     private func showData() {
@@ -51,7 +59,7 @@ class HeroesDetailViewController: UITableViewController {
         case 1:
             return "SuperPoder"
         case 2:
-            return "Batallas"
+            if self.heroHasBattles() { return "Batallas" } else { return "Todavía no ha luchado" }
         case 3:
             return "Biografía"
         default:
@@ -69,6 +77,17 @@ class HeroesDetailViewController: UITableViewController {
                 destinationVC.onCompletion = { success in
                     self.tableView.reloadData()
                 }
+        } else if (segue.identifier == "SEGUE_FROM_HERO_BATTLE_TO_BATTLE_DETAIL") {
+            guard let destinationVC = segue.destination as? BattlesDetailViewController else { return }
+            let cell = sender as! BattleCell
+            let tableCell = tableView.cellForRow(at: [2,0]) as! HeroesBattlesTableViewCell
+            guard let indexPaths = tableCell.collectionView?.indexPath(for: cell) else { return }
+            destinationVC.battles = heroBattles
+            destinationVC.battlePos = indexPaths.item
+            destinationVC.onCompletion = { success in
+                self.tableView.reloadData()
+                tableCell.collectionView?.reloadData()
+            }
         }
         
     }
@@ -81,7 +100,7 @@ class HeroesDetailViewController: UITableViewController {
         case 1:
             return 46
         case 2:
-            return 59
+            if self.heroHasBattles() { return 59 } else { return 0 }
         case 3:
             return 200
         default:

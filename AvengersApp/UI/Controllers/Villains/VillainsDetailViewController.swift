@@ -9,18 +9,16 @@
 import UIKit
 
 class VillainsDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-        
-    let model = generateRandomData()
+    @IBOutlet weak var collectionView: UICollectionView!
     var barTitle: String?
     var villain: Villains?
+    let datamanager = DataManager()
+    private var allBattles: [Battles] = []
+    private var villainBattles: [Battles] = []
     @IBOutlet weak var villainImage: UIImageView!
     @IBOutlet weak var powerStars: UIImageView!
     @IBOutlet weak var biography: UITextView!
-    
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    let battlesData = ["Batalla 1", "Batalla 2", "Batalla 3", "Batalla 4", "Batalla 5"]
+    @IBOutlet weak var hasBattlesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +28,31 @@ class VillainsDetailViewController: UIViewController, UICollectionViewDataSource
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.reloadData()
+        updateVillainBattles()
+         guard let battlesCollection = self.collectionView else { return }
+        if villainHasBattles() {
+            battlesCollection.isHidden = false
+            hasBattlesLabel.isHidden = true
+        } else {
+            battlesCollection.isHidden = true
+            hasBattlesLabel.isHidden = false
+        }
+    }
+    
+    private func updateVillainBattles(){
+        allBattles = datamanager.loadAllBattles()
+        villainBattles = allBattles.filter({ $0.villain == self.villain?.id })
     }
     
     override func viewWillAppear(_ animated: Bool) {
         updateStars()
     }
+    
+    private func villainHasBattles() -> Bool {
+        if villainBattles.isEmpty { return false } else { return true }
+    }
+    
+    
     func updateStars() {
         switch villain!.power {
         case 1:
@@ -63,6 +81,16 @@ class VillainsDetailViewController: UIViewController, UICollectionViewDataSource
             destinationVC.onCompletion = { success in
                 self.updateStars()
             }
+        } else if (segue.identifier == "SEGUE_FROM_VILLAIN_BATTLE_TO_BATTLE_DETAIL") {
+            guard let destinationVC = segue.destination as? BattlesDetailViewController else { return }
+            let cell = sender as! BattleCell
+            guard let indexPaths = self.collectionView.indexPath(for: cell) else { return }
+            destinationVC.battles = villainBattles
+            destinationVC.battlePos = indexPaths.item
+            destinationVC.onCompletion = { success in
+                self.updateVillainBattles()
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -71,15 +99,21 @@ class VillainsDetailViewController: UIViewController, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BattleCell
-        cell.backgroundColor = .red
+        if villainBattles[indexPath.row].winner == self.villain?.id {
+            cell.backgroundColor = .blue
+        } else {
+            cell.backgroundColor = .red
+        }
+        
         cell.layer.cornerRadius = 20.0
-        cell.battleNameLabel?.text = battlesData[indexPath.item]
+        cell.battleNameLabel?.textColor = .white
+        cell.battleNameLabel?.text = "Batalla \(indexPath.item + 1)"
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
-        return battlesData.count
+        return villainBattles.count
     }
 
 }

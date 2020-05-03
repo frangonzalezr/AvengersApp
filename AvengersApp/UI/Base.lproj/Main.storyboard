@@ -137,7 +137,7 @@
                                     <outlet property="roudBattleImage" destination="lS2-iH-17o" id="gxr-js-bUm"/>
                                     <outlet property="villainBar" destination="lg5-Yi-nNM" id="vlC-68-14b"/>
                                     <outlet property="villainBattleImage" destination="a1w-NW-gC5" id="qWK-HW-ACc"/>
-                                    <segue destination="ivS-O5-m0c" kind="show" identifier="SEGUE_FROM_BATTLES_TO_DETAIL" id="4mX-59-ZLD"/>
+                                    <segue destination="ivS-O5-m0c" kind="presentation" identifier="SEGUE_FROM_BATTLES_TO_DETAIL" id="4mX-59-ZLD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -164,23 +164,39 @@
                 <viewControllerPlaceholder storyboardName="AddBattle" id="FK7-Vd-8MO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqY-3E-xWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333" y="986"/>
+            <point key="canvasLocation" x="-264" y="1438"/>
         </scene>
         <!--Battles Detail View Controller-->
         <scene sceneID="9TB-vB-1EA">
             <objects>
                 <viewController id="ivS-O5-m0c" customClass="BattlesDetailViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XQv-hv-0jE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5T-x8-wBb">
+                                <rect key="frame" x="138.66666666666666" y="406" width="136.99999999999997" height="30"/>
+                                <state key="normal" title="Eliminar esta batalla"/>
+                                <connections>
+                                    <action selector="deleteBattle:" destination="ivS-O5-m0c" eventType="touchUpInside" id="x0h-85-AXA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q5T-x8-wBb" firstAttribute="centerX" secondItem="XQv-hv-0jE" secondAttribute="centerX" id="5Kl-sx-oVh"/>
+                            <constraint firstItem="Q5T-x8-wBb" firstAttribute="centerY" secondItem="XQv-hv-0jE" secondAttribute="centerY" id="Ara-M2-HH4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Xp-HD-gWx"/>
                     </view>
                     <navigationItem key="navigationItem" id="boi-Pd-9Xs"/>
+                    <connections>
+                        <outlet property="deleteBattleButton" destination="Q5T-x8-wBb" id="C8n-jf-PTU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ee6-xh-0Is" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-265" y="1699"/>
+            <point key="canvasLocation" x="2610" y="986"/>
         </scene>
         <!--Villanos-->
         <scene sceneID="fSa-43-vvn">
@@ -257,13 +273,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperPoder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHW-Kh-Yrl">
-                                <rect key="frame" x="191.66666666666666" y="357" width="90.999999999999972" height="22"/>
+                                <rect key="frame" x="191.66666666666666" y="357" width="90.999999999999972" height="22.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnV-XA-kmv">
-                                <rect key="frame" x="372" y="357" width="22" height="22"/>
+                                <rect key="frame" x="372" y="357" width="22" height="22.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="RRO-Pe-VG2"/>
                                 </constraints>
@@ -273,7 +289,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3il-BZ-J7E">
-                                <rect key="frame" x="20" y="386" width="374" height="64"/>
+                                <rect key="frame" x="20" y="386.66666666666669" width="374" height="64"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="jwY-BY-MbL"/>
@@ -322,19 +338,19 @@
                                         <connections>
                                             <outlet property="battleNameLabel" destination="tZa-1G-See" id="6pq-Fl-FFv"/>
                                             <outlet property="cellview" destination="xij-2O-HVT" id="HXO-Hk-rDx"/>
-                                            <segue destination="ivS-O5-m0c" kind="show" id="ELb-jR-lsu"/>
+                                            <segue destination="ivS-O5-m0c" kind="presentation" identifier="SEGUE_FROM_VILLAIN_BATTLE_TO_BATTLE_DETAIL" id="ELb-jR-lsu"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biografía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ9-gL-oGN">
-                                <rect key="frame" x="20" y="458" width="68" height="20.333333333333314"/>
+                                <rect key="frame" x="20" y="458.66666666666669" width="68" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jof-YS-Yat">
-                                <rect key="frame" x="20" y="486.33333333333326" width="374" height="326.66666666666674"/>
+                                <rect key="frame" x="20" y="487" width="374" height="326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -344,10 +360,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_stars_5" translatesAutoresizingMaskIntoConstraints="NO" id="j8c-Ap-Fy8">
                                 <rect key="frame" x="20" y="360.66666666666669" width="97" height="15"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todavía no ha luchado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11S-qo-dOe">
+                                <rect key="frame" x="121.66666666666669" y="408" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vcg-Nk-8h7" firstAttribute="trailing" secondItem="jof-YS-Yat" secondAttribute="trailing" constant="20" id="48O-D4-0YW"/>
+                            <constraint firstItem="lHW-Kh-Yrl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j8c-Ap-Fy8" secondAttribute="trailing" constant="8" symbolic="YES" id="6Mc-bB-lBQ"/>
                             <constraint firstItem="jof-YS-Yat" firstAttribute="bottom" secondItem="vcg-Nk-8h7" secondAttribute="bottom" id="79V-C6-QpI"/>
                             <constraint firstItem="lHW-Kh-Yrl" firstAttribute="top" secondItem="TeQ-Np-1na" secondAttribute="bottom" constant="16" id="7yX-IK-rr0"/>
                             <constraint firstItem="jof-YS-Yat" firstAttribute="leading" secondItem="vcg-Nk-8h7" secondAttribute="leading" constant="20" id="9XD-tC-lhp"/>
@@ -357,7 +380,9 @@
                             <constraint firstItem="j8c-Ap-Fy8" firstAttribute="leading" secondItem="TeQ-Np-1na" secondAttribute="leading" id="EmZ-pZ-SNs"/>
                             <constraint firstItem="WnV-XA-kmv" firstAttribute="trailing" secondItem="3il-BZ-J7E" secondAttribute="trailing" id="FfV-7S-2YC"/>
                             <constraint firstItem="qQ9-gL-oGN" firstAttribute="leading" secondItem="vcg-Nk-8h7" secondAttribute="leading" constant="20" id="Hlu-me-3fU"/>
+                            <constraint firstItem="11S-qo-dOe" firstAttribute="centerY" secondItem="3il-BZ-J7E" secondAttribute="centerY" id="Nfe-WN-Khf"/>
                             <constraint firstItem="vcg-Nk-8h7" firstAttribute="trailing" secondItem="3il-BZ-J7E" secondAttribute="trailing" constant="20" id="Ofu-jG-XSE"/>
+                            <constraint firstItem="11S-qo-dOe" firstAttribute="centerX" secondItem="Pn8-PV-txu" secondAttribute="centerX" id="U3E-W8-ZVe"/>
                             <constraint firstItem="jof-YS-Yat" firstAttribute="top" secondItem="qQ9-gL-oGN" secondAttribute="bottom" constant="8" id="XGQ-YD-SBm"/>
                             <constraint firstItem="j8c-Ap-Fy8" firstAttribute="centerY" secondItem="lHW-Kh-Yrl" secondAttribute="centerY" id="Ylf-D5-FGQ"/>
                             <constraint firstItem="WnV-XA-kmv" firstAttribute="leading" secondItem="lHW-Kh-Yrl" secondAttribute="trailing" constant="89.333333333333371" id="a5d-kf-xRx"/>
@@ -366,6 +391,7 @@
                             <constraint firstItem="vcg-Nk-8h7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qQ9-gL-oGN" secondAttribute="trailing" symbolic="YES" id="cQQ-bh-k8o"/>
                             <constraint firstItem="WnV-XA-kmv" firstAttribute="top" secondItem="lHW-Kh-Yrl" secondAttribute="top" id="iGK-yW-S1j"/>
                             <constraint firstItem="qQ9-gL-oGN" firstAttribute="top" secondItem="3il-BZ-J7E" secondAttribute="bottom" constant="8" symbolic="YES" id="rJt-VJ-jRf"/>
+                            <constraint firstItem="11S-qo-dOe" firstAttribute="top" secondItem="TeQ-Np-1na" secondAttribute="bottom" constant="67" id="wBE-L5-4Uw"/>
                             <constraint firstItem="3il-BZ-J7E" firstAttribute="leading" secondItem="vcg-Nk-8h7" secondAttribute="leading" constant="20" id="xlP-6Q-097"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vcg-Nk-8h7"/>
@@ -374,6 +400,7 @@
                     <connections>
                         <outlet property="biography" destination="jof-YS-Yat" id="xmu-XZ-UF8"/>
                         <outlet property="collectionView" destination="3il-BZ-J7E" id="ai1-FM-V9e"/>
+                        <outlet property="hasBattlesLabel" destination="11S-qo-dOe" id="kh4-nK-PaT"/>
                         <outlet property="powerStars" destination="j8c-Ap-Fy8" id="dkv-6a-5A0"/>
                         <outlet property="villainImage" destination="TeQ-Np-1na" id="SLw-Tp-2OH"/>
                     </connections>
@@ -390,7 +417,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aV4-D5-dtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377" y="263"/>
+            <point key="canvasLocation" x="2257" y="263"/>
         </scene>
         <!--Villanos-->
         <scene sceneID="aV1-cE-xnn">
@@ -438,7 +465,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr2-X7-2C0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1307" y="591"/>
+            <point key="canvasLocation" x="-1307" y="986"/>
         </scene>
         <!--Heroes-->
         <scene sceneID="4R6-Jt-cQd">
@@ -601,7 +628,7 @@
                                                     <connections>
                                                         <outlet property="battleNameLabel" destination="KTz-id-g1b" id="TZX-VB-Ylf"/>
                                                         <outlet property="cellview" destination="O75-IF-zMw" id="vGv-pd-6Rx"/>
-                                                        <segue destination="ivS-O5-m0c" kind="show" id="pNA-hy-TaG"/>
+                                                        <segue destination="ivS-O5-m0c" kind="presentation" identifier="SEGUE_FROM_HERO_BATTLE_TO_BATTLE_DETAIL" id="pNA-hy-TaG"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -655,7 +682,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P65-iV-Bgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671.0144927536232" y="-477.45535714285711"/>
+            <point key="canvasLocation" x="2610" y="-477"/>
         </scene>
         <!--EditPower-->
         <scene sceneID="AXX-Xa-Dik">

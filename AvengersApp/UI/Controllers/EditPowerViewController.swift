@@ -50,12 +50,10 @@ extension EditPowerViewController: FloatRatingViewDelegate {
     
     func floatRatingView(_ ratingView: FloatRatingView, isUpdating rating: Double) {
         self.power = self.floatRatingView.rating
-        print("Live Rating: \(self.power ?? 2.5)")
     }
     
     func floatRatingView(_ ratingView: FloatRatingView, didUpdate rating: Double) {
         self.power = self.floatRatingView.rating
-        print("Updated Rating: \(self.power ?? 2.5)")
     }
     
 }
